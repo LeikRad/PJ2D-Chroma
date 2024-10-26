@@ -370,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 1622398948}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: -3.5, z: 0}
+  m_LocalPosition: {x: 6.5, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -401,7 +401,7 @@ Transform:
   m_GameObject: {fileID: 1660878327}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5, y: -3.5, z: 0}
+  m_LocalPosition: {x: -6.5, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -586,13 +586,14 @@ MonoBehaviour:
   speed: 3
   detectionRange: 10
   attackRange: 1.5
-  attackDamage: 10
+  attackDamage: 25
   knockbackForce: 5
   attackCooldown: 1
   patrolPoints:
   - {fileID: 1660878328}
   - {fileID: 1622398949}
   patrolPointTolerance: 0.5
+  chaseCooldown: 2
 --- !u!1 &1895067746
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +629,7 @@ Rigidbody2D:
   m_Mass: 1000000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -704,7 +705,7 @@ Transform:
   m_GameObject: {fileID: 1895067746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.76, y: -3.09, z: 0}
+  m_LocalPosition: {x: 5.7, y: -2.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
