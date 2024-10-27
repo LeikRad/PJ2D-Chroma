@@ -2,25 +2,25 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public Transform player; 
-    public float speed = 3f; 
-    public float detectionRange = 10f; 
-    public float attackRange = 1.5f; 
-    public float attackDamage = 10f; 
-    public float knockbackForce = 2f; 
-    public float attackCooldown = 1f; 
-    private float lastAttackTime = 0f; 
-    public Transform[] patrolPoints; 
-    private int currentPointIndex = 0; 
-    public float patrolPointTolerance = 0.5f; 
+    public Transform player;
+    public float speed = 3f;
+    public float detectionRange = 10f;
+    public float attackRange = 1.5f;
+    public float attackDamage = 10f;
+    public float knockbackForce = 2f;
+    public float attackCooldown = 1f;
+    private float lastAttackTime = 0f;
+    public Transform[] patrolPoints;
+    private int currentPointIndex = 0;
+    public float patrolPointTolerance = 0.5f;
     public float chaseCooldown = 2f;
-    private float lastChaseTime = 0f; 
-    private Rigidbody2D rb; 
-    private bool isPlayerAlive = true; 
+    private float lastChaseTime = 0f;
+    private Rigidbody2D rb;
+    private bool isPlayerAlive = true;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -43,28 +43,28 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            Patrol(); 
+            Patrol();
         }
     }
 
     void ChasePlayer()
     {
-        Vector3 direction = (player.position - transform.position).normalized; 
-        transform.position += direction * speed * Time.deltaTime; 
+        Vector3 direction = (player.position - transform.position).normalized;
+        transform.position += direction * speed * Time.deltaTime;
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     void Patrol()
     {
-        if (patrolPoints.Length == 0) return; 
+        if (patrolPoints.Length == 0) return;
 
-        Transform targetPoint = patrolPoints[currentPointIndex]; 
-        Vector3 direction = (targetPoint.position - transform.position).normalized; 
-        transform.position += direction * speed * Time.deltaTime; 
+        Transform targetPoint = patrolPoints[currentPointIndex];
+        Vector3 direction = (targetPoint.position - transform.position).normalized;
+        transform.position += direction * speed * Time.deltaTime;
 
         if (Vector3.Distance(transform.position, targetPoint.position) < patrolPointTolerance)
         {
-            currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length; 
+            currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length;
         }
     }
 
@@ -73,11 +73,11 @@ public class EnemyAI : MonoBehaviour
         Health playerHealth = player.GetComponent<Health>();
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(attackDamage); 
+            playerHealth.TakeDamage(attackDamage);
 
             if (playerHealth.currentHealth <= 0)
             {
-                isPlayerAlive = false; 
+                isPlayerAlive = false;
             }
         }
 
