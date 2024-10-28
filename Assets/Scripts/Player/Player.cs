@@ -13,9 +13,8 @@ public class Player : MonoBehaviour
 
     float gravity;
     float jumpVelocity;
-
     private Vector3 velocity;
-
+    private int direction = 1;
     PlayerController controller;
 
     void Start()
@@ -35,13 +34,27 @@ public class Player : MonoBehaviour
         }
 
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        Debug.Log("Input: " + input);
+        if (input.x > 0.01f && direction == -1)
+        {
+            // make player face right
+            transform.Rotate(0f,180f,0f);
+            direction = 1;
+        }
+        else if (input.x < -0.01f && direction == 1)
+        {
+            // make player face left
+            transform.Rotate(0f, 180f, 0f);
+            direction = -1;
+        }
 
-        if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
+
+    if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
         {
             velocity.y = jumpVelocity;
         }
 
-        velocity.x = input.x * moveSpeed;
+        velocity.x = Mathf.Abs(input.x) * moveSpeed;
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
