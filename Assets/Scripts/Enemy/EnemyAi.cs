@@ -83,6 +83,9 @@ public class EnemyAI : MonoBehaviour
 
         Vector2 knockbackDirection = (transform.position - player.position).normalized;
         rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+        Debug.Log("Knockback: " + knockbackDirection);
+        Debug.Log("Knock Force" + knockbackForce);
+        Debug.Log("Impulse: " + ForceMode2D.Impulse);
         lastAttackTime = Time.time;
         lastChaseTime = Time.time;
     }

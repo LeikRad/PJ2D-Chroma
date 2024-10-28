@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3072951111576499426}
   - component: {fileID: 3311805109555906191}
   - component: {fileID: 5819837206175909444}
+  - component: {fileID: 3250076650282303446}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -162,7 +163,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5819837206175909444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +179,7 @@ MonoBehaviour:
   player: {fileID: 0}
   speed: 3
   detectionRange: 10
-  attackRange: 1.5
+  attackRange: 1
   attackDamage: 25
   knockbackForce: 5
   attackCooldown: 1
@@ -187,3 +188,17 @@ MonoBehaviour:
   - {fileID: 0}
   patrolPointTolerance: 0.5
   chaseCooldown: 2
+--- !u!114 &3250076650282303446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4554248593532446296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d539eb800834e5f43a62fd067a0995b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 9
+  currentHealth: 9
