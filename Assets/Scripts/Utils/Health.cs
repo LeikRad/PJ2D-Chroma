@@ -3,14 +3,14 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float maxHealth = 100f; 
-    public float currentHealth;
+    private float currentHealth;
 
-    void Start()
+    public void Start()
     {
         currentHealth = maxHealth; 
     }
 
-    public void TakeDamage(float amount)
+    public virtual void TakeDamage(float amount)
     {
         currentHealth -= amount; 
 
@@ -18,6 +18,11 @@ public class Health : MonoBehaviour
         {
             Die(); 
         }
+    }
+    
+    public virtual void TakeDamage(float amount, Transform attacker)
+    {   
+        TakeDamage(amount); 
     }
 
     void Die()

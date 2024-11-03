@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -33,11 +34,11 @@ public class EnemyAI : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (distanceToPlayer < attackRange && Time.time >= lastAttackTime + attackCooldown)
-        {
-            Attack();
-        }
-        else if (distanceToPlayer < detectionRange && Time.time >= lastChaseTime + chaseCooldown)
+        // if (distanceToPlayer < attackRange && Time.time >= lastAttackTime + attackCooldown)
+        // {
+        //     Attack();
+        // }
+        if (distanceToPlayer < detectionRange && Time.time >= lastChaseTime + chaseCooldown)
         {
             ChasePlayer();
         }
@@ -68,25 +69,43 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void Attack()
-    {
-        Health playerHealth = player.GetComponent<Health>();
-        if (playerHealth != null)
-        {
-            playerHealth.TakeDamage(attackDamage);
+    // void Attack()
+    // {
+    //     Health playerHealth = player.GetComponent<Health>();
+    //     if (playerHealth != null)
+    //     {
+    //         playerHealth.TakeDamage(attackDamage);
+    //
+    //         if (playerHealth.currentHealth <= 0)
+    //         {
+    //             isPlayerAlive = false;
+    //         }
+    //     }
+    //
+    //     Vector2 knockbackDirection = (transform.position - player.position).normalized;
+    //     rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+    //     Debug.Log("Knockback: " + knockbackDirection);
+    //     Debug.Log("Knock Force" + knockbackForce);
+    //     Debug.Log("Impulse: " + ForceMode2D.Impulse);
+    //     lastAttackTime = Time.time;
+    //     lastChaseTime = Time.time;
+    // }
 
-            if (playerHealth.currentHealth <= 0)
+    private void OnCollisionEnter2D(Collision2D other)
+    { 
+        // compare tag of the object collided with
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Health playerHealth = other.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
             {
-                isPlayerAlive = false;
+                playerHealth.TakeDamage(attackDamage, this.transform);
+
+                if (playerHealth.GetHealth() <= 0)
+                {
+                    isPlayerAlive = false;
+                }
             }
         }
-
-        Vector2 knockbackDirection = (transform.position - player.position).normalized;
-        rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
-        Debug.Log("Knockback: " + knockbackDirection);
-        Debug.Log("Knock Force" + knockbackForce);
-        Debug.Log("Impulse: " + ForceMode2D.Impulse);
-        lastAttackTime = Time.time;
-        lastChaseTime = Time.time;
     }
 }
