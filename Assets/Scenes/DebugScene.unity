@@ -882,7 +882,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: DebugScene2
   playerPosition: {x: -5, y: 8, z: 0}
-  SceneChanger: {fileID: 0}
 --- !u!1001 &1059232872
 PrefabInstance:
   m_ObjectHideFlags: 0
