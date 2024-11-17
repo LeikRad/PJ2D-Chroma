@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     private int movDirection = 1;
     PlayerController controller;
 
+    public Animator animator;
+
     void Start()
     {
         controller = GetComponent<PlayerController>();
@@ -29,11 +31,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("Speed", Mathf.Abs(velocity.x));
+
         if (canMove)
         {
             if (controller.collisions.above || controller.collisions.below)
             {
                 velocity.y = 0;
+                if (controller.collisions.below)
+                {
+                    animator.SetBool("IsJumping", false);
+                }
             }
             
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -54,6 +62,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
             {
                 velocity.y = jumpVelocity;
+                animator.SetBool("IsJumping", true);
             }
 
             velocity.x = Mathf.Abs(input.x) * moveSpeed;
@@ -61,6 +70,7 @@ public class Player : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
     }
     
     public void Knockback(Transform attacker)
