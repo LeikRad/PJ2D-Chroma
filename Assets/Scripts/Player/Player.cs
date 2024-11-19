@@ -40,13 +40,11 @@ public class Player : MonoBehaviour
             if (input.x > 0.01f && movDirection == -1)
             {
                 // make player face right
-                transform.Rotate(0f,180f,0f);
                 movDirection = 1;
             }
             else if (input.x < -0.01f && movDirection == 1)
             {
                 // make player face left
-                transform.Rotate(0f, 180f, 0f);
                 movDirection = -1;
             }
 
@@ -56,7 +54,7 @@ public class Player : MonoBehaviour
                 velocity.y = jumpVelocity;
             }
 
-            velocity.x = Mathf.Abs(input.x) * moveSpeed;
+            velocity.x = input.x * moveSpeed;
         }
 
         velocity.y += gravity * Time.deltaTime;

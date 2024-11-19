@@ -2,37 +2,35 @@
 
 public class PlayerWeapon : MonoBehaviour
 {
-    public Transform weaponHolder; // O ponto onde a arma será presa
-    public GameObject equippedWeapon; // A arma equipada
-    public Transform firePoint; // O ponto de disparo da bala
-    public GameObject bulletPrefab; // Prefab da bala
+    public Transform weaponHolder;
+    public GameObject equippedWeapon;
+    public Transform firePoint;
+    public GameObject bulletPrefab;
     public float bulletSpeed = 10f;
 
     void Update()
     {
-        if (equippedWeapon != null)
+        if (equippedWeapon)
         {
             AimWeapon();
-            if (Input.GetMouseButtonDown(0)) // Botão esquerdo do mouse
+            if (Input.GetMouseButtonDown(0))
             {
                 Fire();
             }
         }
     }
 
-    void AimWeapon()
+    private void AimWeapon()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
-        Vector3 direction = mousePosition - weaponHolder.position;
+        Vector2 direction = (mousePosition - weaponHolder.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         weaponHolder.rotation = Quaternion.Euler(0, 0, angle);
     }
 
-    void Fire()
+    private void Fire()
     {
-        if (firePoint == null) return;
-
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = firePoint.right * bulletSpeed;
