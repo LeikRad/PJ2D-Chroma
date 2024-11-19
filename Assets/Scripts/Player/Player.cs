@@ -18,8 +18,6 @@ public class Player : MonoBehaviour
     private int movDirection = 1;
     PlayerController controller;
 
-    public Animator animator;
-
     void Start()
     {
         controller = GetComponent<PlayerController>();
@@ -31,36 +29,30 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("Speed", Mathf.Abs(velocity.x));
-
         if (canMove)
         {
             if (controller.collisions.above || controller.collisions.below)
             {
                 velocity.y = 0;
-                if (controller.collisions.below)
-                {
-                    animator.SetBool("IsJumping", false);
-                }
             }
             
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             if (input.x > 0.01f && movDirection == -1)
             {
                 // make player face right
+                rotatePlayer();
                 movDirection = 1;
             }
             else if (input.x < -0.01f && movDirection == 1)
             {
                 // make player face left
+                rotatePlayer();
                 movDirection = -1;
             }
-
 
             if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
             {
                 velocity.y = jumpVelocity;
-                animator.SetBool("IsJumping", true);
             }
 
             velocity.x = input.x * moveSpeed;
@@ -68,14 +60,12 @@ public class Player : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-
     }
     
     public void Knockback(Transform attacker)
     {
         canMove = false;
         int direction = transform.position.x < attacker.position.x ? -1 : 1;
-        Debug.Log("Direction " + direction);
         velocity.x = movDirection * direction * 10;
         velocity.y = jumpVelocity / 2;
         StartCoroutine(KnockbackTimer());
@@ -85,5 +75,14 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
         canMove = true;
+    }
+
+    private void rotatePlayer()
+    {
+        transform.localScale = Vector3.Scale(transform.localScale, new Vector3(-1, 1, 1));
+        foreach (Transform child in transform)
+        {
+            child.localScale = Vector3.Scale(child.localScale, new Vector3(-1, 1, 1));
+        }
     }
 }
