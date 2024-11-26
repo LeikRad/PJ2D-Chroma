@@ -9,9 +9,12 @@ public class Player : MonoBehaviour
     public float moveSpeed = 6f;
     public int maxJumps = 2;
     public float wallSlideSpeed = 2f;
-    public Vector2 wallJumpClimb = new Vector2(7.5f, 16f);
-    public Vector2 wallJumpOff = new Vector2(8.5f, 7f);
-    public Vector2 wallLeap = new Vector2(18f, 17f);
+    public Vector2 wallJumpClimb = new Vector2(7.5f, 16f); // Upward and inward
+    public Vector2 wallJumpOff = new Vector2(8.5f, 7f);    // Directly outward
+    public Vector2 wallLeap = new Vector2(18f, 17f);       // Far outward leap
+    public float dashingPower = 24f;
+    public float dashingTime = 0.2f;
+    public float dashingCooldown = 1f;
 
     float gravity;
     float jumpVelocity;
@@ -22,9 +25,6 @@ public class Player : MonoBehaviour
     private bool wallSliding;
     private int wallDirX;
     PlayerController controller;
-    public float dashingPower = 24f;
-    public float dashingTime = 0.2f;
-    public float dashingCooldown = 1f;
     private bool canDash = true;
     private bool isDashing;
     [SerializeField] private Rigidbody2D rb;
@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         controller = GetComponent<PlayerController>();
-
         gravity = -(2 * jumpHeight) / Mathf.Pow(timeToApex, 2);
         jumpVelocity = Mathf.Abs(gravity) * timeToApex;
         jumpCount = maxJumps;
@@ -73,10 +72,7 @@ public class Player : MonoBehaviour
             if ((controller.collisions.left || controller.collisions.right) && !controller.collisions.below && velocity.y < 0)
             {
                 wallSliding = true;
-                if (velocity.y < -wallSlideSpeed)
-                {
-                    velocity.y = -wallSlideSpeed;
-                }
+                velocity.y = -wallSlideSpeed;
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -88,21 +84,7 @@ public class Player : MonoBehaviour
                 }
                 else if (wallSliding)
                 {
-                    if (wallDirX == input.x)
-                    {
-                        velocity.x = -wallDirX * wallJumpClimb.x;
-                        velocity.y = wallJumpClimb.y;
-                    }
-                    else if (input.x == 0)
-                    {
-                        velocity.x = -wallDirX * wallJumpOff.x;
-                        velocity.y = wallJumpOff.y;
-                    }
-                    else
-                    {
-                        velocity.x = -wallDirX * wallLeap.x;
-                        velocity.y = wallLeap.y;
-                    }
+                    WallJump();
                 }
             }
             if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
@@ -115,6 +97,30 @@ public class Player : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    private void WallJump()
+    {
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        if (horizontalInput == wallDirX) 
+        {
+            velocity.x = -wallDirX * wallJumpClimb.x;
+            velocity.y = wallJumpClimb.y;
+        }
+        else if (horizontalInput == 0) 
+        {
+            velocity.x = -wallDirX * wallJumpOff.x;
+            velocity.y = wallJumpOff.y;
+        }
+        else 
+        {
+            velocity.x = -wallDirX * wallLeap.x;
+            velocity.y = wallLeap.y;
+        }
+        wallSliding = false;
+        jumpCount = maxJumps - 1; 
+    }
+
 
     public void Knockback(Transform attacker)
     {
@@ -139,7 +145,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
-    
+
     private IEnumerator KnockbackTimer()
     {
         yield return new WaitForSeconds(0.4f);
