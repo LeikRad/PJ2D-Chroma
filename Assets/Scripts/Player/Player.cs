@@ -43,6 +43,11 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        if ((controller.collisions.left || controller.collisions.right) && !controller.collisions.below && velocity.y < 0)
+        {
+            wallSliding = true;
+            velocity.y = -wallSlideSpeed;
+        }
         if (canMove)
         {
             if (controller.collisions.above || controller.collisions.below)
@@ -69,22 +74,18 @@ public class Player : MonoBehaviour
 
             wallDirX = (controller.collisions.left) ? -1 : 1;
             wallSliding = false;
-            if ((controller.collisions.left || controller.collisions.right) && !controller.collisions.below && velocity.y < 0)
-            {
-                wallSliding = true;
-                velocity.y = -wallSlideSpeed;
-            }
+            
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (jumpCount > 0)
+                if (wallSliding)
+                {
+                    WallJump();
+                }
+                else if (jumpCount > 0)
                 {
                     velocity.y = jumpVelocity;
                     jumpCount--;
-                }
-                else if (wallSliding)
-                {
-                    WallJump();
                 }
             }
             if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
@@ -101,7 +102,7 @@ public class Player : MonoBehaviour
     private void WallJump()
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
-
+    
         if (horizontalInput == wallDirX) 
         {
             velocity.x = -wallDirX * wallJumpClimb.x;
@@ -118,7 +119,6 @@ public class Player : MonoBehaviour
             velocity.y = wallLeap.y;
         }
         wallSliding = false;
-        jumpCount = maxJumps - 1; 
     }
 
 
