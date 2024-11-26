@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour
     public LayerMask collisionMask;
     BoxCollider2D boxCollider;
     RayCastOrigins rayCastOrigins;
-
+    
     public const float skinWidth = 0.015f;
 
     public int horizontalRayCount = 4;
     public int verticalRayCount = 4;
-
+    
     public CollisionInfo collisions;
 
     float horizontalRaySpacing;
@@ -74,11 +74,13 @@ public class PlayerController : MonoBehaviour
         {
             HorizontalCollisions(ref velocity);
         }
+
         if (velocity.y != 0)
         {
             VerticalCollisions(ref velocity);
         }
 
+        velocity.x = Mathf.Abs(velocity.x);
         transform.Translate(velocity);
         Physics2D.SyncTransforms();
     }
@@ -95,7 +97,7 @@ public class PlayerController : MonoBehaviour
             rayOrigin += Vector2.right * (verticalRaySpacing * i + velocity.x);
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, collisionMask);
 
-            Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.red);
+            Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength * 10, Color.red);
 
             if (hit)
             {
@@ -113,7 +115,9 @@ public class PlayerController : MonoBehaviour
     public void HorizontalCollisions(ref Vector3 velocity)
     {
         float directionX = Mathf.Sign(velocity.x);
-
+        
+        transform.rotation = Quaternion.Euler(0, directionX == 1 ? 0 : 180, 0);
+        
         float rayLength = Mathf.Abs(velocity.x) + skinWidth;
 
         for (int i = 0; i < horizontalRayCount; i++)
@@ -122,7 +126,7 @@ public class PlayerController : MonoBehaviour
             rayOrigin += Vector2.up * (horizontalRaySpacing * i);
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, collisionMask);
 
-            Debug.DrawRay(rayOrigin, Vector2.right * directionX * rayLength, Color.red);
+            Debug.DrawRay(rayOrigin, Vector2.right * directionX * rayLength * 10, Color.red);
 
             if (hit)
             {
@@ -135,5 +139,13 @@ public class PlayerController : MonoBehaviour
                 collisions.right = directionX == 1;
             }
         }
+        if (collisions.right && velocity.x > 0)
+        {
+            velocity.x = 0;
+        }
+        else if (collisions.left && velocity.x < 0)
+        {
+            velocity.x = 0;
+        }   
     }
 }
