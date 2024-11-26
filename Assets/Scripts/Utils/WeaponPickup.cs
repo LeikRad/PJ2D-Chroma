@@ -16,16 +16,17 @@ public class WeaponPickup : MonoBehaviour
         }
     }
 
-    void EquipWeapon(PlayerWeapon playerWeapon)
+    private void EquipWeapon(PlayerWeapon playerWeapon)
     {
         if (playerWeapon.equippedWeapon != null)
         {
-            Destroy(playerWeapon.equippedWeapon); // Remove a arma antiga
+            Destroy(playerWeapon.equippedWeapon);
         }
-
         GameObject newWeapon = Instantiate(weaponPrefab, playerWeapon.weaponHolder);
+        newWeapon.transform.localPosition = Vector3.zero;
+        newWeapon.transform.localRotation = Quaternion.identity;
         playerWeapon.equippedWeapon = newWeapon;
-        playerWeapon.firePoint = newWeapon.transform.Find("FirePoint"); // Configura o FirePoint
-        Destroy(gameObject); // Remove o pickup do cenário
+        playerWeapon.firePoint = newWeapon.transform.Find("FirePoint");
+        Destroy(gameObject);
     }
 }
