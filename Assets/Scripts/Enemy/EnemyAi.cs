@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    public Animator animator;
+
     public Transform player;
     public float speed = 3f;
     public float detectionRange = 10f;
@@ -18,6 +20,8 @@ public class EnemyAI : MonoBehaviour
     private float lastChaseTime = 0f;
     private Rigidbody2D rb;
     private bool isPlayerAlive = true;
+
+    private bool facingRight = false;
 
     void Start()
     {
@@ -61,6 +65,12 @@ public class EnemyAI : MonoBehaviour
 
         Transform targetPoint = patrolPoints[currentPointIndex];
         Vector3 direction = (targetPoint.position - transform.position).normalized;
+
+        if ((direction.x > 0 && !facingRight) || (direction.x < 0 && facingRight))
+        {
+            Flip();
+        }
+
         transform.position += direction * speed * Time.deltaTime;
 
         if (Vector3.Distance(transform.position, targetPoint.position) < patrolPointTolerance)
@@ -107,5 +117,14 @@ public class EnemyAI : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 }
