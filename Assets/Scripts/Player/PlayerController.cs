@@ -136,4 +136,18 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    public void Die()
+    {
+        // Disable player controls
+        GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+        GetComponent<Collider2D>().enabled = false;
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.linearVelocity = new Vector2(0, 10); // Launch upwards
+        rb.gravityScale = 5; // Increase gravity to make the fall dramatic
+
+        // Play death animation or sound
+        Debug.Log("Player died!");
+
+    }
 }

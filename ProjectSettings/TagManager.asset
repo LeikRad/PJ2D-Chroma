@@ -44,23 +44,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 1
-    uniqueID: 2585627149
+  - name: bg1
+    uniqueID: 3300171095
     locked: 0
-  - name: 2
-    uniqueID: 2698250543
+  - name: bg2
+    uniqueID: 2697570733
     locked: 0
-  - name: 3
-    uniqueID: 1506554475
+  - name: bg3
+    uniqueID: 1708323103
     locked: 0
-  - name: 4
-    uniqueID: 3829656067
+  - name: bg4
+    uniqueID: 3144522207
     locked: 0
-  - name: 5
-    uniqueID: 3479496111
+  - name: bg5
+    uniqueID: 3870979839
     locked: 0
-  - name: 6
-    uniqueID: 1619062509
+  - name: bg6
+    uniqueID: 3165121623
     locked: 0
   m_RenderingLayers:
   - Default

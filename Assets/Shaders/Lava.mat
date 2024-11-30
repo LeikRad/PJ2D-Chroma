@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-814305283441876910
+--- !u!114 &-6483363919804916504
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 0
+  version: 9
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -31,21 +31,31 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
     - _HighlightsSpread: 2.5
-    - _MovementSpeed: 0.5
-    - _Scale: 2
-    - _StartTime: 15
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 0.2392157, b: 0, a: 0}
-    - _HighlightsColor: {r: 0.9960784, g: 0.7215686, b: 0.01568628, a: 1}
+    - _HighlightsColor: {r: 1.992157, g: 1.47451, b: 0.03137255, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
