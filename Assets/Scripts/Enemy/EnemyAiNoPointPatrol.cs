@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAiNoPointPatrol : MonoBehaviour
 {
     public float patrolDistance = 2f; // Distância máxima que o inimigo pode se mover para os lados
     public float speed = 2f;         // Velocidade de movimento
