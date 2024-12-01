@@ -1,6 +1,6 @@
 using UnityEngine;
 
-{
+
 public class EnemyAI : MonoBehaviour {
   
     public Animator animator;
@@ -118,8 +118,7 @@ public class EnemyAI : MonoBehaviour {
                 }
             }
         }
-    }
-
+        
     private void Flip()
     {
         Vector3 currentScale = gameObject.transform.localScale;

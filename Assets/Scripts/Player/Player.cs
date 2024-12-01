@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private Vector3 velocity;
     private int movDirection = 1;
     PlayerController controller;
+    public Animator animator;
 
     void Start()
     {
