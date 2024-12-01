@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
             if (controller.collisions.above || controller.collisions.below)
             {
                 velocity.y = 0;
+                animator.SetBool("IsJumping", false);
             }
             
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -54,11 +55,14 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
             {
                 velocity.y = jumpVelocity;
+                animator.SetBool("IsJumping", true);
             }
 
             velocity.x = input.x * moveSpeed;
         }
 
+        //sprites to make player walk
+        animator.SetFloat("Speed", Mathf.Abs(velocity.x));
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
