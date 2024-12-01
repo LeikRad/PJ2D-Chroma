@@ -1,8 +1,8 @@
-using System;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
 {
+public class EnemyAI : MonoBehaviour {
+  
     public Animator animator;
 
     public Transform player;
@@ -20,100 +20,101 @@ public class EnemyAI : MonoBehaviour
     private float lastChaseTime = 0f;
     private Rigidbody2D rb;
     private bool isPlayerAlive = true;
-
+  
     private bool facingRight = false;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    void Update()
-    {
-        if (player == null || !isPlayerAlive)
+        void Start()
         {
-            Patrol();
-            return;
+            rb = GetComponent<Rigidbody2D>();
         }
 
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-
-        // if (distanceToPlayer < attackRange && Time.time >= lastAttackTime + attackCooldown)
-        // {
-        //     Attack();
-        // }
-        if (distanceToPlayer < detectionRange && Time.time >= lastChaseTime + chaseCooldown)
+        void Update()
         {
-            ChasePlayer();
-        }
-        else
-        {
-            Patrol();
-        }
-    }
-
-    void ChasePlayer()
-    {
-        Vector3 direction = (player.position - transform.position).normalized;
-        transform.position += direction * speed * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-    }
-
-    void Patrol()
-    {
-        if (patrolPoints.Length == 0) return;
-
-        Transform targetPoint = patrolPoints[currentPointIndex];
-        Vector3 direction = (targetPoint.position - transform.position).normalized;
-
-        if ((direction.x > 0 && !facingRight) || (direction.x < 0 && facingRight))
-        {
-            Flip();
-        }
-
-        transform.position += direction * speed * Time.deltaTime;
-
-        if (Vector3.Distance(transform.position, targetPoint.position) < patrolPointTolerance)
-        {
-            currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length;
-        }
-    }
-
-    // void Attack()
-    // {
-    //     Health playerHealth = player.GetComponent<Health>();
-    //     if (playerHealth != null)
-    //     {
-    //         playerHealth.TakeDamage(attackDamage);
-    //
-    //         if (playerHealth.currentHealth <= 0)
-    //         {
-    //             isPlayerAlive = false;
-    //         }
-    //     }
-    //
-    //     Vector2 knockbackDirection = (transform.position - player.position).normalized;
-    //     rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
-    //     Debug.Log("Knockback: " + knockbackDirection);
-    //     Debug.Log("Knock Force" + knockbackForce);
-    //     Debug.Log("Impulse: " + ForceMode2D.Impulse);
-    //     lastAttackTime = Time.time;
-    //     lastChaseTime = Time.time;
-    // }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    { 
-        // compare tag of the object collided with
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Health playerHealth = other.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            if (!player || !isPlayerAlive)
             {
-                playerHealth.TakeDamage(attackDamage, this.transform);
+                Patrol();
+                return;
+            }
 
-                if (playerHealth.GetHealth() <= 0)
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+            // if (distanceToPlayer < attackRange && Time.time >= lastAttackTime + attackCooldown)
+            // {
+            //     Attack();
+            // }
+            if (distanceToPlayer < detectionRange && Time.time >= lastChaseTime + chaseCooldown)
+            {
+                ChasePlayer();
+            }
+            else
+            {
+                Patrol();
+            }
+        }
+
+        void ChasePlayer()
+        {
+            Vector3 direction = (player.position - transform.position).normalized;
+            transform.position += direction * (speed * Time.deltaTime);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        }
+
+        void Patrol()
+        {
+            if (patrolPoints.Length == 0) return;
+
+            Transform targetPoint = patrolPoints[currentPointIndex];
+            Vector3 direction = (targetPoint.position - transform.position).normalized;
+
+            if ((direction.x > 0 && !facingRight) || (direction.x < 0 && facingRight))
+            {
+                Flip();
+            }
+
+            transform.position += direction * speed * Time.deltaTime;
+
+            if (Vector3.Distance(transform.position, targetPoint.position) < patrolPointTolerance)
+            {
+                currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length;
+            }
+        }
+
+        // void Attack()
+        // {
+        //     Health playerHealth = player.GetComponent<Health>();
+        //     if (playerHealth != null)
+        //     {
+        //         playerHealth.TakeDamage(attackDamage);
+        //
+        //         if (playerHealth.currentHealth <= 0)
+        //         {
+        //             isPlayerAlive = false;
+        //         }
+        //     }
+        //
+        //     Vector2 knockbackDirection = (transform.position - player.position).normalized;
+        //     rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+        //     Debug.Log("Knockback: " + knockbackDirection);
+        //     Debug.Log("Knock Force" + knockbackForce);
+        //     Debug.Log("Impulse: " + ForceMode2D.Impulse);
+        //     lastAttackTime = Time.time;
+        //     lastChaseTime = Time.time;
+        // }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        { 
+            // compare tag of the object collided with
+            if (other.gameObject.CompareTag("Player"))
+            {
+                Health playerHealth = other.gameObject.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
                 {
-                    isPlayerAlive = false;
+                    playerHealth.TakeDamage(attackDamage, this.transform);
+
+                    if (playerHealth.GetHealth() <= 0)
+                    {
+                        isPlayerAlive = false;
+                    }
                 }
             }
         }
