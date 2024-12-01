@@ -14,10 +14,13 @@ public class PlayerHealth : Health
         damageFlash = GetComponent<DamageFlash>();
     }
 
-    public override void TakeDamage(float amount, Transform  attacker)
+    public override void TakeDamage(float amount, Transform attacker)
     {
         base.TakeDamage(amount);
-        player.Knockback(attacker);
+        if (attacker != null)
+        {
+            player.Knockback(attacker);
+        }
         animator.SetBool("IsHurt", true);
         damageFlash.CallDamageFlash();
     }
