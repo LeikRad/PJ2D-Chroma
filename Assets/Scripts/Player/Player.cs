@@ -69,12 +69,14 @@ public class Player : MonoBehaviour
         velocity.x = movDirection * direction * 10;
         velocity.y = jumpVelocity / 2;
         StartCoroutine(KnockbackTimer());
+        //animator.SetBool("IsHurt", true);
     }
     
     private IEnumerator KnockbackTimer()
     {
         yield return new WaitForSeconds(0.4f);
         canMove = true;
+        animator.SetBool("IsHurt", false);
     }
 
     private void rotatePlayer()
