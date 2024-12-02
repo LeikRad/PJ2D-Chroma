@@ -23,5 +23,6 @@ public class PlayerHealth : Health
         }
         animator.SetBool("IsHurt", true);
         damageFlash.CallDamageFlash();
+        animator.SetBool("IsHurt", false);
     }
 }
