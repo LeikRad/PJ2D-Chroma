@@ -448,7 +448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3217054450980152734, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
       propertyPath: jumpVelocity
-      value: 14
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 3217054450980152734, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
       propertyPath: wallSlideSpeed
@@ -461,6 +461,18 @@ PrefabInstance:
     - target: {fileID: 3217054450980152734, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217054450980152734, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
+      propertyPath: wallJumpingForce.x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217054450980152734, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
+      propertyPath: wallJumpingForce.y
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217054450980152734, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
+      propertyPath: wallJumpingDuration
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3881701639076185599, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
       propertyPath: m_Sprite

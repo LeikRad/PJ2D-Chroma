@@ -205,6 +205,9 @@ public class Player : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1;
             transform.localScale = localScale;
+            // rotate weaponholder
+            Debug.Log(transform.GetChild(0));
+            transform.GetChild(0).Rotate(0f, 180f, 0f);
         }
     }
 
