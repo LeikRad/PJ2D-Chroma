@@ -2,7 +2,7 @@
  
 public class Checkpoint : MonoBehaviour
 {
-    public BoxCollider2D trigger;
+    public CircleCollider2D trigger;
  
     private void OnTriggerEnter2D(Collider2D collision)
     {

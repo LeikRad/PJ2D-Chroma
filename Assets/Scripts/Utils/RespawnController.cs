@@ -16,6 +16,7 @@ public class RespawnController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
+            Debug.Log("Player entered the respawn point");
         {
             Health playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)
