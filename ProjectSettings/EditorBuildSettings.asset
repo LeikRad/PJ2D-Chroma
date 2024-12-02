@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DebugScene2.unity
     guid: 444cc4236ab613f4497094707e95c7bf
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: f4c01d697ceae4015a32518cf70f8d59
+  - enabled: 1
+    path: Assets/Scenes/Room_1.1.unity
+    guid: 9bce8704ef0b14d2eaf18ed534e48239
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
