@@ -1,0 +1,1157 @@
+fileFormatVersion: 2
+guid: a939bf78d9f444b71a7be31bfe60e245
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8090981520990770075
+    second: graffiti_splatter_button_0
+  - first:
+      213: -3171019264583209545
+    second: graffiti_splatter_button_1
+  - first:
+      213: -8248009040507129732
+    second: graffiti_splatter_button_2
+  - first:
+      213: -6576024769638216182
+    second: graffiti_splatter_button_3
+  - first:
+      213: -2900796321147421940
+    second: graffiti_splatter_button_4
+  - first:
+      213: -991921110752454132
+    second: graffiti_splatter_button_5
+  - first:
+      213: -3957221650902114122
+    second: graffiti_splatter_button_6
+  - first:
+      213: 1905157676178503640
+    second: graffiti_splatter_button_7
+  - first:
+      213: 8328107469261815570
+    second: graffiti_splatter_button_8
+  - first:
+      213: 4518581831581076895
+    second: graffiti_splatter_button_9
+  - first:
+      213: 6751587991908987282
+    second: graffiti_splatter_button_10
+  - first:
+      213: 176946142516248074
+    second: graffiti_splatter_button_11
+  - first:
+      213: -1832399058861097907
+    second: graffiti_splatter_button_12
+  - first:
+      213: 3274225375856783860
+    second: graffiti_splatter_button_13
+  - first:
+      213: 1116600099157143073
+    second: graffiti_splatter_button_14
+  - first:
+      213: 852358392912990242
+    second: graffiti_splatter_button_15
+  - first:
+      213: 5298780069168629845
+    second: graffiti_splatter_button_16
+  - first:
+      213: 2003136731410790171
+    second: graffiti_splatter_button_17
+  - first:
+      213: 5714641804319916100
+    second: graffiti_splatter_button_18
+  - first:
+      213: 8272175477247186904
+    second: graffiti_splatter_button_19
+  - first:
+      213: 1915269100880796353
+    second: graffiti_splatter_button_20
+  - first:
+      213: -5252886138675460214
+    second: graffiti_splatter_button_21
+  - first:
+      213: -8143648630270973293
+    second: graffiti_splatter_button_22
+  - first:
+      213: -602512284315615249
+    second: graffiti_splatter_button_23
+  - first:
+      213: -3055708930066087848
+    second: graffiti_splatter_button_24
+  - first:
+      213: 650094768331806115
+    second: graffiti_splatter_button_25
+  - first:
+      213: -3936378964391389242
+    second: graffiti_splatter_button_26
+  - first:
+      213: 59156706920253488
+    second: graffiti_splatter_button_27
+  - first:
+      213: 2418168545914056021
+    second: graffiti_splatter_button_28
+  - first:
+      213: 2485824668799643343
+    second: graffiti_splatter_button_29
+  - first:
+      213: -9172763397637113884
+    second: graffiti_splatter_button_30
+  - first:
+      213: -4718429504769984250
+    second: graffiti_splatter_button_31
+  - first:
+      213: -7769328838906281608
+    second: graffiti_splatter_button_32
+  - first:
+      213: -7245579421623732106
+    second: graffiti_splatter_button_33
+  - first:
+      213: 7629345327323142716
+    second: graffiti_splatter_button_34
+  - first:
+      213: 4930182151127860075
+    second: graffiti_splatter_button_35
+  - first:
+      213: -957892030480063985
+    second: graffiti_splatter_button_36
+  - first:
+      213: 6780666665857873849
+    second: graffiti_splatter_button_37
+  - first:
+      213: 876745143657935007
+    second: graffiti_splatter_button_38
+  - first:
+      213: -1955365860812047952
+    second: graffiti_splatter_button_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: graffiti_splatter_button_0
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 427
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c681dac2f07bf80800000000000000
+      internalID: -8090981520990770075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_1
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 422
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bde89697c64ef3d0800000000000000
+      internalID: -3171019264583209545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_2
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 392
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70bc5c3a7f298d80800000000000000
+      internalID: -8248009040507129732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_3
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 409
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e4b8330544db4a0800000000000000
+      internalID: -6576024769638216182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_4
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 397
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b7f307d1d4eb7d0800000000000000
+      internalID: -2900796321147421940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_5
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 366
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a9364510dfb32f0800000000000000
+      internalID: -991921110752454132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_6
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 388
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0ae70ffdf1519c0800000000000000
+      internalID: -3957221650902114122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_7
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 389
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d77ab100da707a10800000000000000
+      internalID: 1905157676178503640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_8
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 385
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21fb0ac7e91639370800000000000000
+      internalID: 8328107469261815570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_9
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 364
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d8cef3c3a35be30800000000000000
+      internalID: 4518581831581076895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 360
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2913787d18572bd50800000000000000
+      internalID: 6751587991908987282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_11
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 364
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e7e014493a47200800000000000000
+      internalID: 176946142516248074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_12
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 353
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4cf2d1b3c20296e0800000000000000
+      internalID: -1832399058861097907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_13
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 365
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1738ab1a2607d20800000000000000
+      internalID: 3274225375856783860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_14
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 333
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e6d6acfd5fe7f00800000000000000
+      internalID: 1116600099157143073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_15
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 364
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220d6ee317f24db00800000000000000
+      internalID: 852358392912990242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_16
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 363
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55847b5166c098940800000000000000
+      internalID: 5298780069168629845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_17
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 368
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b17f6408e329ccb10800000000000000
+      internalID: 2003136731410790171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_18
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 370
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440061d817c7e4f40800000000000000
+      internalID: 5714641804319916100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_19
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 357
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d71409c4cbacc270800000000000000
+      internalID: 8272175477247186904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_20
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 358
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca18478917649a10800000000000000
+      internalID: 1915269100880796353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_21
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 354
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a870daa43eff917b0800000000000000
+      internalID: -5252886138675460214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_22
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 27
+        width: 727
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a2a19b7b2fbfe80800000000000000
+      internalID: -8143648630270973293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_23
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 348
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feffe88054273a7f0800000000000000
+      internalID: -602512284315615249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_24
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 345
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8500c6efae0f795d0800000000000000
+      internalID: -3055708930066087848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_25
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 348
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a5d1c85fb9950900800000000000000
+      internalID: 650094768331806115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_26
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 345
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7912e003c2f59c0800000000000000
+      internalID: -3936378964391389242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_27
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 253
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 038401626ba22d000800000000000000
+      internalID: 59156706920253488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_28
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 172
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55dea320b7f0f8120800000000000000
+      internalID: 2418168545914056021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_29
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 151
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcea4b5ad5c6f7220800000000000000
+      internalID: 2485824668799643343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_30
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 45
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7722b0a4cc3b080800000000000000
+      internalID: -9172763397637113884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_31
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 43
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 609767e5d55c48eb0800000000000000
+      internalID: -4718429504769984250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_32
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 40
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8710bcda59ccd2490800000000000000
+      internalID: -7769328838906281608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_33
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 51
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 678bc3e97e7827b90800000000000000
+      internalID: -7245579421623732106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_34
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 41
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ad1e73721e0e960800000000000000
+      internalID: 7629345327323142716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_35
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 27
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6382f39b868b6440800000000000000
+      internalID: 4930182151127860075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_36
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 27
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f02ee0ef542e4b2f0800000000000000
+      internalID: -957892030480063985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_37
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 31
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b77ac63864c91e50800000000000000
+      internalID: 6780666665857873849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_38
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 28
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f90b74e1013da2c00800000000000000
+      internalID: 876745143657935007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graffiti_splatter_button_39
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 8
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b93f5c0c152dd4e0800000000000000
+      internalID: -1955365860812047952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      graffiti_splatter_button_0: -8090981520990770075
+      graffiti_splatter_button_1: -3171019264583209545
+      graffiti_splatter_button_10: 6751587991908987282
+      graffiti_splatter_button_11: 176946142516248074
+      graffiti_splatter_button_12: -1832399058861097907
+      graffiti_splatter_button_13: 3274225375856783860
+      graffiti_splatter_button_14: 1116600099157143073
+      graffiti_splatter_button_15: 852358392912990242
+      graffiti_splatter_button_16: 5298780069168629845
+      graffiti_splatter_button_17: 2003136731410790171
+      graffiti_splatter_button_18: 5714641804319916100
+      graffiti_splatter_button_19: 8272175477247186904
+      graffiti_splatter_button_2: -8248009040507129732
+      graffiti_splatter_button_20: 1915269100880796353
+      graffiti_splatter_button_21: -5252886138675460214
+      graffiti_splatter_button_22: -8143648630270973293
+      graffiti_splatter_button_23: -602512284315615249
+      graffiti_splatter_button_24: -3055708930066087848
+      graffiti_splatter_button_25: 650094768331806115
+      graffiti_splatter_button_26: -3936378964391389242
+      graffiti_splatter_button_27: 59156706920253488
+      graffiti_splatter_button_28: 2418168545914056021
+      graffiti_splatter_button_29: 2485824668799643343
+      graffiti_splatter_button_3: -6576024769638216182
+      graffiti_splatter_button_30: -9172763397637113884
+      graffiti_splatter_button_31: -4718429504769984250
+      graffiti_splatter_button_32: -7769328838906281608
+      graffiti_splatter_button_33: -7245579421623732106
+      graffiti_splatter_button_34: 7629345327323142716
+      graffiti_splatter_button_35: 4930182151127860075
+      graffiti_splatter_button_36: -957892030480063985
+      graffiti_splatter_button_37: 6780666665857873849
+      graffiti_splatter_button_38: 876745143657935007
+      graffiti_splatter_button_39: -1955365860812047952
+      graffiti_splatter_button_4: -2900796321147421940
+      graffiti_splatter_button_5: -991921110752454132
+      graffiti_splatter_button_6: -3957221650902114122
+      graffiti_splatter_button_7: 1905157676178503640
+      graffiti_splatter_button_8: 8328107469261815570
+      graffiti_splatter_button_9: 4518581831581076895
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

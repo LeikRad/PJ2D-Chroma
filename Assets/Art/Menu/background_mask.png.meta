@@ -1,0 +1,1729 @@
+fileFormatVersion: 2
+guid: 30afc3437074b45698bbebc276fe51f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5096864439619014619
+    second: background_mask_0
+  - first:
+      213: 4492641787606878080
+    second: background_mask_1
+  - first:
+      213: -6682661155358064292
+    second: background_mask_2
+  - first:
+      213: -1774928832577257072
+    second: background_mask_3
+  - first:
+      213: -4240991336658548942
+    second: background_mask_4
+  - first:
+      213: -2291699912763876308
+    second: background_mask_5
+  - first:
+      213: 6341126111954046840
+    second: background_mask_6
+  - first:
+      213: -702909403018874701
+    second: background_mask_7
+  - first:
+      213: -861631854559110268
+    second: background_mask_8
+  - first:
+      213: -7865835205634282396
+    second: background_mask_9
+  - first:
+      213: 5727848474069854924
+    second: background_mask_10
+  - first:
+      213: -5554086497332966269
+    second: background_mask_11
+  - first:
+      213: 5193341220891242417
+    second: background_mask_12
+  - first:
+      213: -1201536147390254692
+    second: background_mask_13
+  - first:
+      213: 8242731556905275837
+    second: background_mask_14
+  - first:
+      213: -2078897304582957196
+    second: background_mask_15
+  - first:
+      213: -6873496019561714637
+    second: background_mask_16
+  - first:
+      213: -8897982733903423117
+    second: background_mask_17
+  - first:
+      213: -2478885314762283772
+    second: background_mask_18
+  - first:
+      213: 7300941387639060784
+    second: background_mask_19
+  - first:
+      213: 2463644193795082077
+    second: background_mask_20
+  - first:
+      213: -8846497430111317813
+    second: background_mask_21
+  - first:
+      213: 5709500966805788565
+    second: background_mask_22
+  - first:
+      213: -5100347782205904822
+    second: background_mask_23
+  - first:
+      213: -712527645782737439
+    second: background_mask_24
+  - first:
+      213: -281791266681127929
+    second: background_mask_25
+  - first:
+      213: 716613255400881969
+    second: background_mask_26
+  - first:
+      213: -1653444612787044794
+    second: background_mask_27
+  - first:
+      213: -9001350460848997296
+    second: background_mask_28
+  - first:
+      213: -7187937278715868517
+    second: background_mask_29
+  - first:
+      213: -442746037253804140
+    second: background_mask_30
+  - first:
+      213: -259624210272598603
+    second: background_mask_31
+  - first:
+      213: 1645583668192043125
+    second: background_mask_32
+  - first:
+      213: -3565589969434104527
+    second: background_mask_33
+  - first:
+      213: 6388703922110276201
+    second: background_mask_34
+  - first:
+      213: 3547000910420419994
+    second: background_mask_35
+  - first:
+      213: -306985768722894954
+    second: background_mask_36
+  - first:
+      213: -530197753313391923
+    second: background_mask_37
+  - first:
+      213: 5160675975708551148
+    second: background_mask_38
+  - first:
+      213: 2789586314666839615
+    second: background_mask_39
+  - first:
+      213: 6192643173201760763
+    second: background_mask_40
+  - first:
+      213: -993587698065449331
+    second: background_mask_41
+  - first:
+      213: -6569458456123140195
+    second: background_mask_42
+  - first:
+      213: 3637574242922262232
+    second: background_mask_43
+  - first:
+      213: 2127538997354831162
+    second: background_mask_44
+  - first:
+      213: 4865550835164359323
+    second: background_mask_45
+  - first:
+      213: -551997776346386070
+    second: background_mask_46
+  - first:
+      213: 7286729993191225161
+    second: background_mask_47
+  - first:
+      213: 3392862124307384860
+    second: background_mask_48
+  - first:
+      213: 9163538696024008333
+    second: background_mask_49
+  - first:
+      213: -8211521331682562731
+    second: background_mask_50
+  - first:
+      213: 2485732924383149339
+    second: background_mask_51
+  - first:
+      213: -3964876204757975967
+    second: background_mask_52
+  - first:
+      213: -6700602361810801073
+    second: background_mask_53
+  - first:
+      213: 7348157952335038906
+    second: background_mask_54
+  - first:
+      213: 4342471462212712981
+    second: background_mask_55
+  - first:
+      213: 3378813687667978711
+    second: background_mask_56
+  - first:
+      213: 2923973675486136886
+    second: background_mask_57
+  - first:
+      213: 6547093816573348790
+    second: background_mask_58
+  - first:
+      213: -3203730918054381330
+    second: background_mask_59
+  - first:
+      213: 7181509413548855826
+    second: background_mask_60
+  - first:
+      213: -5771052215825784739
+    second: background_mask_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: background_mask_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 925
+        width: 12
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdfcfc71433bbb640800000000000000
+      internalID: 5096864439619014619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 948
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087426d17e1195e30800000000000000
+      internalID: 4492641787606878080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 947
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51c490e51b6243a0800000000000000
+      internalID: -6682661155358064292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_3
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 897
+        width: 50
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09142a871af2e57e0800000000000000
+      internalID: -1774928832577257072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_4
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 945
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23745fa59d8f425c0800000000000000
+      internalID: -4240991336658548942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_5
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 941
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c5aef321f3230e0800000000000000
+      internalID: -2291699912763876308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_6
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 924
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87f89f22a94300850800000000000000
+      internalID: 6341126111954046840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_7
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 930
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b037c34f93ce36f0800000000000000
+      internalID: -702909403018874701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_8
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 854
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48bd7d5b46eda04f0800000000000000
+      internalID: -861631854559110268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_9
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 791
+        width: 132
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c28623e80f6d290800000000000000
+      internalID: -7865835205634282396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_10
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 818
+        width: 70
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca6238f6d76d7f40800000000000000
+      internalID: 5727848474069854924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_11
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 866
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38cccaae1cbebe2b0800000000000000
+      internalID: -5554086497332966269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_12
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 870
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bfad9c2354721840800000000000000
+      internalID: 5193341220891242417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_13
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 859
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c91330e6d39435fe0800000000000000
+      internalID: -1201536147390254692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_14
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 859
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db1dd3cdda0146270800000000000000
+      internalID: 8242731556905275837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_15
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 874
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 477d0db7ae54623e0800000000000000
+      internalID: -2078897304582957196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 1318
+        height: 637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c66fc99cf6c90a0800000000000000
+      internalID: -6873496019561714637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_17
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 855
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3799028d8d3048480800000000000000
+      internalID: -8897982733903423117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_18
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 846
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40569ae90fa399dd0800000000000000
+      internalID: -2478885314762283772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_19
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 858
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0397c209287225560800000000000000
+      internalID: 7300941387639060784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_20
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 853
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d570c10675f903220800000000000000
+      internalID: 2463644193795082077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_21
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 828
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc01fc3457dea3580800000000000000
+      internalID: -8846497430111317813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_22
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 762
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597553b01e83c3f40800000000000000
+      internalID: 5709500966805788565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_23
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 762
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a486aa207bce739b0800000000000000
+      internalID: -5100347782205904822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_24
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 717
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed797c91e79c16f0800000000000000
+      internalID: -712527645782737439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_25
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 710
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70cf9a00650e61cf0800000000000000
+      internalID: -281791266681127929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_26
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 718
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f718185fbe1f900800000000000000
+      internalID: 716613255400881969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_27
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 708
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e7b0f82e8cd09e0800000000000000
+      internalID: -1653444612787044794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_28
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 109
+        width: 1705
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05cfb427277c41380800000000000000
+      internalID: -9001350460848997296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_29
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 710
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a4a5ad0215f3c90800000000000000
+      internalID: -7187937278715868517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 49
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f66cb23dc0bd9f0800000000000000
+      internalID: -442746037253804140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_31
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 226
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b54c930821a56cf0800000000000000
+      internalID: -259624210272598603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_32
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57065c6a0a946d610800000000000000
+      internalID: 1645583668192043125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_33
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 220
+        width: 57
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d2f2960da748ec0800000000000000
+      internalID: -3565589969434104527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_34
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 229
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962278c4e5c39a850800000000000000
+      internalID: 6388703922110276201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 214
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a95a893098a793130800000000000000
+      internalID: 3547000910420419994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_36
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 206
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69feb20e11e5dbbf0800000000000000
+      internalID: -306985768722894954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_37
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 209
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca8b05d3fb54a8f0800000000000000
+      internalID: -530197753313391923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_38
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 189
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce7200d15776e9740800000000000000
+      internalID: 5160675975708551148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_39
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 182
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e020c29f996b620800000000000000
+      internalID: 2789586314666839615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_40
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 192
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1507fe720b0f550800000000000000
+      internalID: 6192643173201760763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 439
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e5c9bb0411632f0800000000000000
+      internalID: -993587698065449331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_42
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 103
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d971814375894d4a0800000000000000
+      internalID: -6569458456123140195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_43
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 105
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8deed7150824b7230800000000000000
+      internalID: 3637574242922262232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_44
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 83
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d10272279868d10800000000000000
+      internalID: 2127538997354831162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_45
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 89
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9aa39ea4b8e58340800000000000000
+      internalID: 4865550835164359323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_46
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 92
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61711072f8e658f0800000000000000
+      internalID: -551997776346386070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_47
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 56
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 947f852725aaf1560800000000000000
+      internalID: 7286729993191225161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_48
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 70
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a083b302ed51f20800000000000000
+      internalID: 3392862124307384860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_49
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 76
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d86ae0eb4ed6b2f70800000000000000
+      internalID: 9163538696024008333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_50
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 26
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55da487fad0da0e80800000000000000
+      internalID: -8211521331682562731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_51
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 31
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1db95cbce81f7220800000000000000
+      internalID: 2485732924383149339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_52
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 49
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c700d391ee9f8c0800000000000000
+      internalID: -3964876204757975967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_53
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 42
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4eaf1b37ada203a0800000000000000
+      internalID: -6700602361810801073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_54
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 43
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab94466b9b6e9f560800000000000000
+      internalID: 7348157952335038906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_55
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 5
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ab57899ce834c30800000000000000
+      internalID: 4342471462212712981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_56
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 30
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d17dafa525f3ee20800000000000000
+      internalID: 3378813687667978711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_57
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 27
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ac1f3e09a049820800000000000000
+      internalID: 2923973675486136886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_58
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 24
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbc2006323fbda50800000000000000
+      internalID: 6547093816573348790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_59
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8be6144bf0a83d0800000000000000
+      internalID: -3203730918054381330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_60
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 7
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21214b923c8d9a360800000000000000
+      internalID: 7181509413548855826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_mask_61
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 0
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d502977069a19efa0800000000000000
+      internalID: -5771052215825784739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      background_mask_0: 5096864439619014619
+      background_mask_1: 4492641787606878080
+      background_mask_10: 5727848474069854924
+      background_mask_11: -5554086497332966269
+      background_mask_12: 5193341220891242417
+      background_mask_13: -1201536147390254692
+      background_mask_14: 8242731556905275837
+      background_mask_15: -2078897304582957196
+      background_mask_16: -6873496019561714637
+      background_mask_17: -8897982733903423117
+      background_mask_18: -2478885314762283772
+      background_mask_19: 7300941387639060784
+      background_mask_2: -6682661155358064292
+      background_mask_20: 2463644193795082077
+      background_mask_21: -8846497430111317813
+      background_mask_22: 5709500966805788565
+      background_mask_23: -5100347782205904822
+      background_mask_24: -712527645782737439
+      background_mask_25: -281791266681127929
+      background_mask_26: 716613255400881969
+      background_mask_27: -1653444612787044794
+      background_mask_28: -9001350460848997296
+      background_mask_29: -7187937278715868517
+      background_mask_3: -1774928832577257072
+      background_mask_30: -442746037253804140
+      background_mask_31: -259624210272598603
+      background_mask_32: 1645583668192043125
+      background_mask_33: -3565589969434104527
+      background_mask_34: 6388703922110276201
+      background_mask_35: 3547000910420419994
+      background_mask_36: -306985768722894954
+      background_mask_37: -530197753313391923
+      background_mask_38: 5160675975708551148
+      background_mask_39: 2789586314666839615
+      background_mask_4: -4240991336658548942
+      background_mask_40: 6192643173201760763
+      background_mask_41: -993587698065449331
+      background_mask_42: -6569458456123140195
+      background_mask_43: 3637574242922262232
+      background_mask_44: 2127538997354831162
+      background_mask_45: 4865550835164359323
+      background_mask_46: -551997776346386070
+      background_mask_47: 7286729993191225161
+      background_mask_48: 3392862124307384860
+      background_mask_49: 9163538696024008333
+      background_mask_5: -2291699912763876308
+      background_mask_50: -8211521331682562731
+      background_mask_51: 2485732924383149339
+      background_mask_52: -3964876204757975967
+      background_mask_53: -6700602361810801073
+      background_mask_54: 7348157952335038906
+      background_mask_55: 4342471462212712981
+      background_mask_56: 3378813687667978711
+      background_mask_57: 2923973675486136886
+      background_mask_58: 6547093816573348790
+      background_mask_59: -3203730918054381330
+      background_mask_6: 6341126111954046840
+      background_mask_60: 7181509413548855826
+      background_mask_61: -5771052215825784739
+      background_mask_7: -702909403018874701
+      background_mask_8: -861631854559110268
+      background_mask_9: -7865835205634282396
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
