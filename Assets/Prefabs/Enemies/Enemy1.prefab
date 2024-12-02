@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4554248593532446296, guid: 7336d25ba6e6e5d4a98ecda676476ec9, type: 3}
       propertyPath: m_Name
-      value: Enemy Variant
+      value: Enemy1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5819837206175909444, guid: 7336d25ba6e6e5d4a98ecda676476ec9, type: 3}
@@ -112,7 +112,7 @@ MonoBehaviour:
   patrolDistance: 2
   speed: 2
   player: {fileID: 0}
-  detectionRange: 10
+  detectionRange: 3
   attackDamage: 10
 --- !u!95 &2405785996604967122
 Animator:

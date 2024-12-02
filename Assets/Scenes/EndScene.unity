@@ -828,7 +828,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: 1120.9548, y: 200}
+  m_SizeDelta: {x: 1244.4202, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875202349
 MonoBehaviour:
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You finished Chroma , thank you for playing !
+  m_text: You finished the Alpha, thank you for playing !
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3faec04edccc430c95b7a703f3650a1, type: 2}
   m_sharedMaterial: {fileID: -4990471595689233039, guid: a3faec04edccc430c95b7a703f3650a1, type: 2}

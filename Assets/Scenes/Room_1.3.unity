@@ -987,7 +987,7 @@ MonoBehaviour:
   patrolDistance: 2
   speed: 2
   player: {fileID: 0}
-  detectionRange: 10
+  detectionRange: 3
   attackDamage: 10
 --- !u!1 &209424525
 GameObject:
@@ -15743,7 +15743,7 @@ MonoBehaviour:
   patrolDistance: 2
   speed: 2
   player: {fileID: 0}
-  detectionRange: 10
+  detectionRange: 3
   attackDamage: 10
 --- !u!1 &1607254856
 GameObject:
@@ -17566,6 +17566,10 @@ PrefabInstance:
     - target: {fileID: 4268532540489011755, guid: b48b0e6b74640094abb105c63f1040c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278874500732867368, guid: b48b0e6b74640094abb105c63f1040c9, type: 3}
+      propertyPath: detectionRange
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4278874500732867368, guid: b48b0e6b74640094abb105c63f1040c9, type: 3}
       propertyPath: patrolDistance
