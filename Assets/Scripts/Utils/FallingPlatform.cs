@@ -17,13 +17,11 @@ public class FallingPlatform : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet")) 
         {
             rb.isKinematic = false; 
-            rb.excludeLayers |= 1 << LayerMask.NameToLayer("Player");
         }
         else if (collision.gameObject.CompareTag("Floor")) 
         {
             rb.isKinematic = true; 
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            rb.includeLayers |= (1 << LayerMask.NameToLayer("Player"));
         }
     }
 }
