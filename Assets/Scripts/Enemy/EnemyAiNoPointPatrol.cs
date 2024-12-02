@@ -15,6 +15,7 @@ public class EnemyAiNoPointPatrol : MonoBehaviour
     void Start()
     {
         spawnPosition = transform.position; 
+        player = GameObject.FindGameObjectWithTag("Player").transform;  
     }
 
     void Update()

@@ -8,7 +8,7 @@ public class SceneChanger : MonoBehaviour
     public static SceneChanger Instance { get; private set; }
     
     private Scene currentScene;
-    
+    private FadeInOut fade;
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -16,6 +16,10 @@ public class SceneChanger : MonoBehaviour
     
     private void Start()
     {
+        // get fade script inside same object
+        fade = GetComponent<FadeInOut>();
+        // load main menu scene
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
         currentScene = SceneManager.GetSceneAt(1);
         Debug.Log("Current Scene: " + currentScene.name);
     }
@@ -27,16 +31,26 @@ public class SceneChanger : MonoBehaviour
     
     private IEnumerator LoadScene(string sceneName, Vector3 position)
     {
-        // disable player and camera
-
+        // FdaeIn
+        fade.fadeIn();
+        // disable player movement
+        GameObject player = GameObject.FindWithTag("Player");
+        yield return new WaitForSeconds(fade.timeToFade);
         // unload current scene
         yield return SceneManager.UnloadSceneAsync(currentScene);
         
         // load next scene
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         // get player object and move it
-        GameObject player = GameObject.FindWithTag("Player");
-        player.transform.position = position;
+        if (player != null && position != Vector3.zero)
+        {
+            player.transform.position = position;
+        }
+        // FadeOut
+        fade.fadeOut();
+        yield return new WaitForSeconds(fade.timeToFade);
+        
+        //enable player movement
         
         // update current scene
         currentScene = SceneManager.GetSceneByName(sceneName);

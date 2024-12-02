@@ -18,7 +18,8 @@ public class FallingPlatform : MonoBehaviour
         {
             rb.isKinematic = false; 
         }
-        else if (collision.gameObject.CompareTag("Floor")) 
+        // TODO: FIX THIS SHIT
+        else if (collision.gameObject.CompareTag("Respawn"))
         {
             rb.isKinematic = true; 
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
