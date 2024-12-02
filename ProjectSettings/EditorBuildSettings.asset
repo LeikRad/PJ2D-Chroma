@@ -6,10 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DebugScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MasterScene.unity
+    guid: 5fc33b905a64cd24b8f143d310264260
   - enabled: 1
-    path: Assets/Scenes/DebugScene2.unity
-    guid: 444cc4236ab613f4497094707e95c7bf
+    path: Assets/Scenes/Room_1.2.unity
+    guid: ca9240ca4238742b1b81e569a619580d
+  - enabled: 1
+    path: Assets/Scenes/Room_1.1.unity
+    guid: 9bce8704ef0b14d2eaf18ed534e48239
+  - enabled: 1
+    path: Assets/Scenes/Room_1.3.unity
+    guid: 6fcd79db134ed344d9a16b47359c9807
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

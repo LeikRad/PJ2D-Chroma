@@ -207,7 +207,7 @@ public class Player : MonoBehaviour
             transform.localScale = localScale;
             // rotate weaponholder
         }
-    }
+    }   
 
     // if (canMove)
         // {
