@@ -278,7 +278,7 @@ MonoBehaviour:
   jumpVelocity: 29
   terminalVelocity: -10
   maxJumps: 2
-  dashingForce: 10
+  dashingForce: 24
   dashingTime: 0.2
   dashingCooldown: 1
   wallSlideSpeed: 1
