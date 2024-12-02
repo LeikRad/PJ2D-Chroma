@@ -1,24 +1,27 @@
 using UnityEngine;
 
-namespace Enemy
-{
-    public class EnemyAI : MonoBehaviour
-    {
-        public Transform player;
-        public float speed = 3f;
-        public float detectionRange = 10f;
-        public float attackRange = 1.5f;
-        public float attackDamage = 10f;
-        public float knockbackForce = 2f;
-        public float attackCooldown = 1f;
-        private float lastAttackTime = 0f;
-        public Transform[] patrolPoints;
-        private int currentPointIndex = 0;
-        public float patrolPointTolerance = 0.5f;
-        public float chaseCooldown = 2f;
-        private float lastChaseTime = 0f;
-        private Rigidbody2D rb;
-        private bool isPlayerAlive = true;
+
+public class EnemyAI : MonoBehaviour {
+  
+    public Animator animator;
+
+    public Transform player;
+    public float speed = 3f;
+    public float detectionRange = 10f;
+    public float attackRange = 1.5f;
+    public float attackDamage = 10f;
+    public float knockbackForce = 2f;
+    public float attackCooldown = 1f;
+    private float lastAttackTime = 0f;
+    public Transform[] patrolPoints;
+    private int currentPointIndex = 0;
+    public float patrolPointTolerance = 0.5f;
+    public float chaseCooldown = 2f;
+    private float lastChaseTime = 0f;
+    private Rigidbody2D rb;
+    private bool isPlayerAlive = true;
+  
+    private bool facingRight = false;
 
         void Start()
         {
@@ -62,6 +65,12 @@ namespace Enemy
 
             Transform targetPoint = patrolPoints[currentPointIndex];
             Vector3 direction = (targetPoint.position - transform.position).normalized;
+
+            if ((direction.x > 0 && !facingRight) || (direction.x < 0 && facingRight))
+            {
+                Flip();
+            }
+
             transform.position += direction * speed * Time.deltaTime;
 
             if (Vector3.Distance(transform.position, targetPoint.position) < patrolPointTolerance)
@@ -109,5 +118,13 @@ namespace Enemy
                 }
             }
         }
+        
+    private void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 }

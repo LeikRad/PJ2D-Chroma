@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private Vector3 velocity;
     private int movDirection = 1;
     PlayerController controller;
+    public Animator animator;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
             if (controller.collisions.above || controller.collisions.below)
             {
                 velocity.y = 0;
+                animator.SetBool("IsJumping", false);
             }
             
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -53,11 +55,14 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
             {
                 velocity.y = jumpVelocity;
+                animator.SetBool("IsJumping", true);
             }
 
             velocity.x = input.x * moveSpeed;
         }
 
+        //sprites to make player walk
+        animator.SetFloat("Speed", Mathf.Abs(velocity.x));
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
@@ -69,12 +74,14 @@ public class Player : MonoBehaviour
         velocity.x = movDirection * direction * 10;
         velocity.y = jumpVelocity / 2;
         StartCoroutine(KnockbackTimer());
+        //animator.SetBool("IsHurt", true);
     }
     
     private IEnumerator KnockbackTimer()
     {
         yield return new WaitForSeconds(0.4f);
         canMove = true;
+        animator.SetBool("IsHurt", false);
     }
 
     private void rotatePlayer()
