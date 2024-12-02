@@ -383,6 +383,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 355636402989931507, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 355636402989931507, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
       propertyPath: m_SleepingMode
       value: 0
       objectReference: {fileID: 0}
@@ -444,7 +448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3217054450980152734, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
       propertyPath: jumpVelocity
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3217054450980152734, guid: 166b9c3943115c544b1b0afc08c9a954, type: 3}
       propertyPath: wallSlideSpeed
