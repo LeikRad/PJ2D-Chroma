@@ -5609,7 +5609,7 @@ MonoBehaviour:
   m_Intensity: 0.1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000a5f90015579db4c4ada9c9a01ff1d265df996dbbff76bae657eca7bc
+  m_ApplyToSortingLayers: 1ff1d265ada9c9a0579db4c4ff76bae6df996dbb57eca7bca5f9001500000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -16761,11 +16761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6146749991600963143, guid: 62693806d08bfa54eb165f61db35dc5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.99
+      value: 37.9
       objectReference: {fileID: 0}
     - target: {fileID: 6146749991600963143, guid: 62693806d08bfa54eb165f61db35dc5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.08
+      value: 3.93
       objectReference: {fileID: 0}
     - target: {fileID: 6146749991600963143, guid: 62693806d08bfa54eb165f61db35dc5e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17143,6 +17143,22 @@ PrefabInstance:
       propertyPath: dashingForce
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 8516611108562779867, guid: 5aa6bcda0a1f385449e49e6b65a4b93e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516611108562779867, guid: 5aa6bcda0a1f385449e49e6b65a4b93e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1031704105
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516611108562779867, guid: 5aa6bcda0a1f385449e49e6b65a4b93e, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516611108562779867, guid: 5aa6bcda0a1f385449e49e6b65a4b93e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3bf756d6a825dc248a6cc928a300548d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
