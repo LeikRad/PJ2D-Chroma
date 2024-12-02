@@ -46,6 +46,18 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     public Animator animator;
 
+    public static Player Instance { get; private set; }
+
+    void Awake() {
+
+        if(Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if(Instance != this) {
+            Destroy(this);
+        }
+    }
     void Start()
     {
     }
@@ -206,10 +218,8 @@ public class Player : MonoBehaviour
             localScale.x *= -1;
             transform.localScale = localScale;
             // rotate weaponholder
-            Debug.Log(transform.GetChild(0));
-            transform.GetChild(0).Rotate(0f, 180f, 0f);
         }
-    }
+    }   
 
     // if (canMove)
         // {
