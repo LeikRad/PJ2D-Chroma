@@ -188,10 +188,12 @@ public class Player : MonoBehaviour
             isWallSliding = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x,
                 Mathf.Clamp(rb.linearVelocity.y, -wallSlideSpeed, float.MaxValue));
+            animator.SetBool("IsWall", true);
         }
         else
         {
             isWallSliding = false;
+            animator.SetBool("IsWall", false);
         }
     }
 
