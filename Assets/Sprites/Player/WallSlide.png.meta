@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 16fd81dae2f11104193c8574003e1ac2
+guid: 0adea85982ecdb94bb5808af20dfb77f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6121933337779387585
-    second: Wall_Slide_0
+      213: 807139013275419232
+    second: WallSlide_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -50,9 +50,9 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
-  spritePivot: {x: 0.75, y: 0.5}
+  spritePivot: {x: 0.65, y: 0.5}
   spritePixelsToUnits: 300
-  spriteBorder: {x: 392, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall_Slide_0
+      name: WallSlide_0
       rect:
         serializedVersion: 2
         x: 429
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f33c90f80168a0ba0800000000000000
-      internalID: -6121933337779387585
+      spriteID: 06204aaf7a8833b00800000000000000
+      internalID: 807139013275419232
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Wall_Slide_0: -6121933337779387585
+      WallSlide_0: 807139013275419232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
