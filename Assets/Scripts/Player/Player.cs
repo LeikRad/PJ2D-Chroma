@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     private bool isFacingRight = true;
     
     // Jumps
-    public int maxJumps = 2;
+    public int maxJumps = 1;
     private int jumpCount = 0;
     
     // Dash
@@ -79,9 +79,7 @@ public class Player : MonoBehaviour
         
         if (isGrounded)
         {
-            // TODO: fix bug here of animation
             jumpCount = 0;
-            animator.SetBool("IsJumping", false);
         }
         
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -90,6 +88,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             Jump();
+            animator.SetBool("IsJumping", true);
         }
         
         if (Input.GetButtonDown("Jump") && rb.linearVelocityY > 0){
@@ -100,6 +99,10 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
+            animator.SetBool("isDash", true);
+        } else
+        {
+            animator.SetBool("isDash", false);
         }
         
         WallSlide();
@@ -107,6 +110,12 @@ public class Player : MonoBehaviour
         if (!isWallJumping)
         {
             Flip();
+        }
+
+        //THE PROBLEM IS HERE
+        if (rb.linearVelocityY <= 0)
+        {
+            animator.SetBool("IsJumping", false);
         }
     }
 
