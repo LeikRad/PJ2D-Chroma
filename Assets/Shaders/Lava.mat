@@ -57,6 +57,10 @@ Material:
     - _QueueOffset: 0
     - _Scale: 2
     - _StartTime: 15
+    - _WaveCount: 0.75
+    - _WaveFlowDirection: 1
+    - _WaveSize: 0.16
+    - _WaveSpeed: 4
     m_Colors:
     - _BaseColor: {r: 1, g: 0.2392157, b: 0, a: 0}
     - _HighlightsColor: {r: 1.992157, g: 1.47451, b: 0.03137255, a: 0}
