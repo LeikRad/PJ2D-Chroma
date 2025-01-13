@@ -76,12 +76,10 @@ public class Player : MonoBehaviour
         {
             rb.linearVelocityY = terminalVelocity;
         }
-        
+
         if (isGrounded)
         {
-            // TODO: fix bug here of animation
             jumpCount = 0;
-            animator.SetBool("IsJumping", false);
         }
         
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -90,23 +88,36 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             Jump();
+            animator.SetBool("IsJumping", true);
+
         }
-        
+
         if (Input.GetButtonDown("Jump") && rb.linearVelocityY > 0){
             rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY * 0.5f);
         }
-        
+
         // TODO: Input map this 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
+            animator.SetBool("isDash", true);
         }
-        
+        else
+        {
+            animator.SetBool("isDash", false);
+        }
+
         WallSlide();
         WallJump();
         if (!isWallJumping)
         {
             Flip();
+        }
+
+        //jumping bug
+        if (rb.linearVelocityY <= 0)
+        {
+            animator.SetBool("IsJumping", false);
         }
     }
 
@@ -118,7 +129,7 @@ public class Player : MonoBehaviour
         }
         jumpCount++;
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
-        animator.SetBool("IsJumping", true);
+        //animator.SetBool("IsJumping", true);
         return;
     }
 
@@ -188,10 +199,12 @@ public class Player : MonoBehaviour
             isWallSliding = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x,
                 Mathf.Clamp(rb.linearVelocity.y, -wallSlideSpeed, float.MaxValue));
+            animator.SetBool("IsWallSlide", true);
         }
         else
         {
             isWallSliding = false;
+            animator.SetBool("IsWallSlide", false);
         }
     }
 
@@ -199,12 +212,14 @@ public class Player : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+        animator.SetBool("IsDash", true);
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
         rb.linearVelocity = new Vector2(transform.localScale.x * dashingForce, 0f);
         yield return new WaitForSeconds(dashingTime);
         rb.gravityScale = originalGravity;
         isDashing = false;
+        animator.SetBool("IsDash", false);
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
