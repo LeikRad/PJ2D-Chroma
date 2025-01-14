@@ -3209,8 +3209,8 @@
     "m_ObjectId": "88630173ebfe4477bff578df04cdb85f",
     "m_Title": "Sine Wave forVertex Displacement",
     "m_Position": {
-        "x": -411.00048828125,
-        "y": -1354.500244140625
+        "x": -411.0,
+        "y": -1354.5
     }
 }
 
