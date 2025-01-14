@@ -42,29 +42,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 1242586809
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: background
-    uniqueID: 352385445
-    locked: 0
-  - name: bg1
-    uniqueID: 3300171095
-    locked: 0
-  - name: bg2
-    uniqueID: 2697570733
-    locked: 0
-  - name: bg3
-    uniqueID: 1708323103
-    locked: 0
-  - name: bg4
-    uniqueID: 3144522207
-    locked: 0
-  - name: bg5
-    uniqueID: 3870979839
-    locked: 0
-  - name: bg6
-    uniqueID: 3165121623
     locked: 0
   m_RenderingLayers:
   - Default
