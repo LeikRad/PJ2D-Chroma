@@ -25,4 +25,10 @@ public class PlayerHealth : Health
         damageFlash.CallDamageFlash();
         animator.SetBool("IsHurt", false);
     }
+    
+    public void RestoreHealth(float amount)
+    {
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+        Debug.Log("Health restored to: " + currentHealth);
+    }
 }

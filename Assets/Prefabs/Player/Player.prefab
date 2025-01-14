@@ -305,8 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e5ddbc02914ca9aa1f8d47f6d3727c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  invulnerabilityDuration: 5
+  maxHealth: 30
+  invulnerabilityDuration: 1
   animator: {fileID: 2301948987361897729}
 --- !u!114 &7003637994777776472
 MonoBehaviour:

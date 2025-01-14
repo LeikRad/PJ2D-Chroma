@@ -4,7 +4,7 @@ using System.Collections;
 public class Health : MonoBehaviour
 {
     public float maxHealth = 100f;
-    private float currentHealth;
+    protected float currentHealth;
     public float invulnerabilityDuration = 3f; 
     private bool isInvulnerable = false; 
     private Collider2D objectCollider; 
