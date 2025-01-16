@@ -3,7 +3,7 @@
 public class RespawnController : MonoBehaviour
 {
     public float attackDamage = 10f;
-    public Transform respawnPoint; // Ponto de respawn para a área específica (lava)
+    public Transform respawnPoint; 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,17 +12,20 @@ public class RespawnController : MonoBehaviour
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                // Aplica dano ao jogador
                 playerHealth.TakeDamage(attackDamage, null);
-
-                // Teleporta o jogador para o ponto de respawn da área (não altera o ponto de respawn geral)
-                collision.transform.position = respawnPoint.position;
-
-                // Se a saúde chegar a 0, o jogador morre e renasce no ponto geral
-                if (playerHealth.GetHealth() <= 0)
+                RespawnManager.Instance.SetCheckpointRespawnPoint(respawnPoint.position);
+                if (playerHealth.GetHealth() > 0)
                 {
-                    GameManager.Instance.RespawnPlayer();
+                    collision.transform.position = respawnPoint.position;
                 }
+                else
+                {
+                    RespawnManager.Instance.RespawnPlayerAtBench();
+                }
+            }
+            else
+            {
+                Debug.LogWarning("PlayerHealth component is missing on the Player.");
             }
         }
     }

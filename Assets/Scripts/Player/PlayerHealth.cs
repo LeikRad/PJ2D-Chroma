@@ -17,6 +17,7 @@ public class PlayerHealth : Health
     public override void TakeDamage(float amount, Transform attacker)
     {
         base.TakeDamage(amount);
+        Debug.Log("Player has " + currentHealth + " health.");
         if (attacker != null)
         {
             player.Knockback(attacker);
@@ -26,9 +27,8 @@ public class PlayerHealth : Health
         animator.SetBool("IsHurt", false);
     }
     
-    public void RestoreHealth(float amount)
+    public void RestoreHealth()
     {
-        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
-        Debug.Log("Health restored to: " + currentHealth);
+        currentHealth = maxHealth;
     }
 }

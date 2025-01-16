@@ -20,19 +20,19 @@ public class Health : MonoBehaviour
         }
     }
 
-    public virtual void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
-        if (isInvulnerable) return; 
+        if (isInvulnerable) return;
 
         currentHealth -= amount;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && CompareTag("Enemy"))
         {
             Die();
         }
         else
         {
-            StartCoroutine(InvulnerabilityTimer()); 
+            StartCoroutine(InvulnerabilityTimer());
         }
     }
 

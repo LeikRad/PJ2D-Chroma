@@ -2,13 +2,12 @@
 
 public class RestBench : MonoBehaviour
 {
-    public float healthRecoveryAmount = 30f; 
     public static Transform benchRespawnPoint; 
 
     private void Start()
     {
-        // Define o ponto inicial do banco como o ponto de respawn
         benchRespawnPoint = transform;
+        RespawnManager.Instance.SetBenchRespawnPoint(benchRespawnPoint); 
     }
 
     private void Update()
@@ -21,16 +20,8 @@ public class RestBench : MonoBehaviour
 
     private void SitAndRest()
     {
-        // Recuperar saúde do jogador
         PlayerHealth playerHealth = Player.Instance.GetComponent<PlayerHealth>();
-        if (playerHealth != null)
-        {
-            playerHealth.RestoreHealth(healthRecoveryAmount);
-        }
-
-        // Define o banco como ponto de respawn ativo
-        GameManager.Instance.SetRespawnPoint(transform);
-
+        playerHealth.RestoreHealth();
         Debug.Log("Player is resting at the bench.");
     }
 }
