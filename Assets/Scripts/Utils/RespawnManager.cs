@@ -7,13 +7,14 @@ public class RespawnManager : MonoBehaviour
 
     private Transform lastCheckpointRespawnPoint; 
     private Transform benchRespawnPoint; 
-    private string specificSceneName = "Room_1.1"; 
+    private string specificSceneName = "EnemyTest"; 
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
@@ -36,10 +37,8 @@ public class RespawnManager : MonoBehaviour
     {
         if (benchRespawnPoint != null)
         {
-            // Certifique-se de que a MasterScene permanece carregada
             SceneManager.LoadScene("MasterScene", LoadSceneMode.Additive); 
             SceneManager.sceneLoaded += OnSceneLoadedAtBench;
-            // Carregar a cena específica sem descarregar a MasterScene
             SceneManager.LoadScene(specificSceneName); 
         }
         else
@@ -53,10 +52,8 @@ public class RespawnManager : MonoBehaviour
     {
         if (lastCheckpointRespawnPoint != null)
         {
-            // Certifique-se de que a MasterScene permanece carregada
             SceneManager.LoadScene("MasterScene", LoadSceneMode.Additive);
             SceneManager.sceneLoaded += OnSceneLoadedAtCheckpoint;
-            // Carregar a cena específica sem descarregar a MasterScene
             SceneManager.LoadScene(specificSceneName);
         }
         else

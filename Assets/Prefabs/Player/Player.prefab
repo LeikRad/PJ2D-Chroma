@@ -306,8 +306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
-  invulnerabilityDuration: 1
   animator: {fileID: 2301948987361897729}
+  invulnerabilityTime: 1.5
 --- !u!114 &7003637994777776472
 MonoBehaviour:
   m_ObjectHideFlags: 0

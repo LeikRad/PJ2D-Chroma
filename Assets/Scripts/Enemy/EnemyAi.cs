@@ -110,11 +110,6 @@ public class EnemyAI : MonoBehaviour {
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(attackDamage, this.transform);
-
-                    if (playerHealth.GetHealth() <= 0)
-                    {
-                        isPlayerAlive = false;
-                    }
                 }
             }
         }
