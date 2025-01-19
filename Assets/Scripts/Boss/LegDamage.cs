@@ -13,6 +13,10 @@ public class LegDamage : MonoBehaviour
             if (player != null)
             {
                 player.TakeDamage(damage, null);
+                if (player.GetHealth() <= 0)
+                {
+                    player.Death();
+                }
             }
         }
     }

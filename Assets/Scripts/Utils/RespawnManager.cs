@@ -26,7 +26,7 @@ public class RespawnManager : MonoBehaviour
         {
             currentScene = SceneManager.GetSceneAt(1);
             SceneManager.UnloadSceneAsync(currentScene);
-            SceneManager.LoadScene(benchSceneName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(benchSceneName, LoadSceneMode.Additive);
             Player.Instance.transform.position = benchRespawnPosition;
             currentScene = SceneManager.GetSceneByName(benchSceneName);
         }

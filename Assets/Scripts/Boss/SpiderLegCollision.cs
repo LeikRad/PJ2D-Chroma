@@ -11,6 +11,10 @@ public class SpiderLegCollision : MonoBehaviour
             if (player != null)
             {
                 player.TakeDamage(10); 
+                if (player.GetHealth() <= 0)
+                {
+                    player.Death();
+                }
             }
         }
     }
