@@ -27,6 +27,8 @@ public class WeaponPickup : MonoBehaviour
         newWeapon.transform.localRotation = Quaternion.identity;
         playerWeapon.equippedWeapon = newWeapon;
         playerWeapon.firePoint = newWeapon.transform.Find("FirePoint");
+        playerWeapon.rotationPoint = newWeapon.transform.Find("RotationPoint");
+        newWeapon.transform.localPosition -= playerWeapon.rotationPoint.localPosition;
         Destroy(gameObject);
     }
 }

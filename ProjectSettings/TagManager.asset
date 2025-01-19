@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - Floor
   - Boss
+  - BossLava
   layers:
   - Default
   - TransparentFX

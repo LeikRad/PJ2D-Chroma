@@ -55,23 +55,6 @@ public class PhaseOneState : BossBaseState
         }
     }
 
-
-    private IEnumerator SwoopAnimation()
-    {
-        while (Vector3.Distance(boss.SpiderLeg.transform.position, boss.SwoopEndPoint.position) > 0.1f)
-        {
-            boss.SpiderLeg.transform.position = Vector3.MoveTowards(
-                boss.SpiderLeg.transform.position,
-                boss.SwoopEndPoint.position,
-                boss.SwoopSpeed * Time.deltaTime
-            );
-
-            yield return null;
-        }
-        Debug.Log("Swoop Attack Completed");
-        boss.SpiderLeg.transform.position = boss.SwoopStartPoint.position;
-    }
-
     public override void Exit()
     {
         Debug.Log("Exiting Phase One");

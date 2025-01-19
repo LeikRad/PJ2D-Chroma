@@ -1,10 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RespawnController : MonoBehaviour
 {
     public float attackDamage = 10f; 
-    public Transform respawnPoint; 
+    public Transform respawnPoint;
+    private BossStateMachine boss;
+
+    private void Awake()
+    {
+        boss = FindObjectOfType<BossStateMachine>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,40 +19,31 @@ public class RespawnController : MonoBehaviour
         {
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
 
-            if (playerHealth != null)
+            if (playerHealth != null && CompareTag("BossLava"))
             {
                 playerHealth.TakeDamage(attackDamage, null);
-                string currentScene = SceneManager.GetActiveScene().name;
-
-                if (currentScene == "EnemyTest") 
                 {
-                    Debug.Log("Boss fight lava detected! Respawning player above lava.");
                     if (playerHealth.GetHealth() > 0)
                     {
-                        collision.transform.position = respawnPoint.position; 
+                        boss.ResetPhaseFour();
                     }
                     else
                     {
-                        RespawnManager.Instance.RespawnPlayerAtBench(); 
-                    }
-                }
-                else 
-                {
-                    Debug.Log("Standard lava room detected! Using normal respawn system.");
-                    RespawnManager.Instance.SetCheckpointRespawnPoint(respawnPoint.position);
-                    if (playerHealth.GetHealth() > 0)
-                    {
-                        collision.transform.position = respawnPoint.position;
-                    }
-                    else
-                    {
-                        RespawnManager.Instance.RespawnPlayerAtBench();
+                        playerHealth.Death();
                     }
                 }
             }
             else
+                playerHealth.TakeDamage(attackDamage, null);
             {
-                Debug.LogWarning("PlayerHealth component is missing on the Player.");
+                if (playerHealth.GetHealth() > 0)
+                {
+                    collision.transform.position = respawnPoint.position;
+                }
+                else
+                {
+                    playerHealth.Death();
+                }
             }
         }
     }

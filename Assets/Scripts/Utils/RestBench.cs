@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RestBench : MonoBehaviour
 {
-    public static Transform benchRespawnPoint; 
+    public string benchSceneName;
 
     private void Start()
     {
-        benchRespawnPoint = transform;
-        RespawnManager.Instance.SetBenchRespawnPoint(benchRespawnPoint); 
+        Scene BenchScene = gameObject.scene;
+        benchSceneName = BenchScene.name;
     }
 
     private void Update()
@@ -22,6 +23,6 @@ public class RestBench : MonoBehaviour
     {
         PlayerHealth playerHealth = Player.Instance.GetComponent<PlayerHealth>();
         playerHealth.RestoreHealth();
-        Debug.Log("Player is resting at the bench.");
+        RespawnManager.Instance.SetBenchRespawnPoint(benchSceneName, transform.position);
     }
 }

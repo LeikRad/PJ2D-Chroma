@@ -49,12 +49,6 @@ public class PlayerHealth : Health
         animator.SetBool("IsHurt", true);
         damageFlash.CallDamageFlash();
         animator.SetBool("IsHurt", false);
-
-        if (currentHealth <= 0)
-        {
-            Debug.Log("Player died!");
-            Death();
-        }
     }
 
     public void RestoreHealth()
@@ -64,6 +58,6 @@ public class PlayerHealth : Health
     
     public void Death()
     {
-        RespawnManager.Instance.RespawnPlayerAtBench();
+        RespawnManager.Instance.RespawnPlayer();
     }
 }

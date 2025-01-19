@@ -6,7 +6,7 @@ public class PhaseTwoState : BossBaseState
 {
     private float attackTimer;
     private float attackCooldown = 3f;
-    private int legsToSpawn = 6;
+    private int legsToSpawn = 4;
     private List<Vector3> usedPositions = new List<Vector3>();
     private float minSpacing = 2f; 
 
@@ -28,7 +28,7 @@ public class PhaseTwoState : BossBaseState
             PerformLegAttacks();
         }
 
-        if (boss.Health < boss.MaxHealth * 0.33f)
+        if (boss.Health < boss.MaxHealth * 0.5f)
         {
             boss.TransitionToState(boss.PhaseThree);
         }
