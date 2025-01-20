@@ -4,10 +4,10 @@ using System.Collections;
 public class Health : MonoBehaviour
 {
     public float maxHealth = 100f;
-    private float currentHealth;
+    public float currentHealth;
     public float invulnerabilityDuration = 3f; 
     private bool isInvulnerable = false; 
-    private Collider2D objectCollider; 
+    private Collider2D objectCollider;
 
     public void Start()
     {
@@ -18,6 +18,9 @@ public class Health : MonoBehaviour
         {
             Debug.LogWarning("No Collider2D attached to the GameObject.");
         }
+
+        Animator play_animator = Player.Instance.GetComponent<Animator>();
+        play_animator.SetBool("Died", false);
     }
 
     public virtual void TakeDamage(float amount)
@@ -29,10 +32,11 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+
         }
         else
         {
-            StartCoroutine(InvulnerabilityTimer()); 
+            StartCoroutine(InvulnerabilityTimer());
         }
     }
 
@@ -43,7 +47,11 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        Debug.Log("Player is Dead!");
+
+        Animator play_animator = Player.Instance.GetComponent<Animator>();
+        play_animator.SetBool("Died", true);
     }
 
     public float GetHealth()

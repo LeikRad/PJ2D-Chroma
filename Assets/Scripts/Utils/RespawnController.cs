@@ -22,6 +22,15 @@ public class RespawnController : MonoBehaviour
             }
             Debug.Log(respawnPoint.position);
             collision.transform.position = respawnPoint.position;
+
+            //if (isPlayerAlive)
+            //{
+                //animator.setBoolean("isDead", false);
+            //}
+            //else
+            //{
+                //animator.setBoolean("isDead", true);
+            //}
         }
     }
 }

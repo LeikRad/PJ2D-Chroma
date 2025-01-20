@@ -22,8 +22,8 @@ public class Player : MonoBehaviour
     public float dashingForce = 10f;
     public float dashingTime = 0.2f;
     public float dashingCooldown = 1f;
-    private bool canDash = true;
-    private bool isDashing;
+    public bool canDash = true;
+    public bool isDashing;
     
     // Wall Sliding and Jumping
     public float wallSlideSpeed = 1f;
@@ -46,6 +46,8 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     public Animator animator;
 
+    private Health health;
+
     public static Player Instance { get; private set; }
 
     void Awake() {
@@ -60,64 +62,70 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
+        health = GetComponent<Health>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDashing || !canMove)
+        if (health.currentHealth > 0)
         {
-            return;
-        }
-        IsGroundedCheck();
 
-        // limit player falling speed
-        if (rb.linearVelocityY < terminalVelocity)
-        {
-            rb.linearVelocityY = terminalVelocity;
-        }
+            if (isDashing || !canMove)
+            {
+                return;
+            }
+            IsGroundedCheck();
 
-        if (isGrounded)
-        {
-            jumpCount = 0;
-        }
-        
-        horizontal = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
-        
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-            animator.SetBool("IsJumping", true);
+            // limit player falling speed
+            if (rb.linearVelocityY < terminalVelocity)
+            {
+                rb.linearVelocityY = terminalVelocity;
+            }
 
-        }
+            if (isGrounded)
+            {
+                jumpCount = 0;
+            }
 
-        if (Input.GetButtonDown("Jump") && rb.linearVelocityY > 0){
-            rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY * 0.5f);
-        }
+            horizontal = Input.GetAxisRaw("Horizontal");
+            animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-        // TODO: Input map this 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            StartCoroutine(Dash());
-            animator.SetBool("isDash", true);
-        }
-        else
-        {
-            animator.SetBool("isDash", false);
-        }
+            if (Input.GetButtonDown("Jump"))
+            {
+                Jump();
+                animator.SetBool("IsJumping", true);
 
-        WallSlide();
-        WallJump();
-        if (!isWallJumping)
-        {
-            Flip();
-        }
+            }
 
-        //jumping bug
-        if (rb.linearVelocityY <= 0)
-        {
-            animator.SetBool("IsJumping", false);
+            if (Input.GetButtonDown("Jump") && rb.linearVelocityY > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY * 0.5f);
+            }
+
+            // TODO: Input map this 
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            {
+                StartCoroutine(Dash());
+                animator.SetBool("isDash", true);
+            }
+            else
+            {
+                animator.SetBool("isDash", false);
+            }
+
+            WallSlide();
+            WallJump();
+            if (!isWallJumping)
+            {
+                Flip();
+            }
+
+            //jumping bug
+            if (rb.linearVelocityY <= 0)
+            {
+                animator.SetBool("IsJumping", false);
+            }
         }
     }
 
@@ -212,14 +220,12 @@ public class Player : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        animator.SetBool("IsDash", true);
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
         rb.linearVelocity = new Vector2(transform.localScale.x * dashingForce, 0f);
         yield return new WaitForSeconds(dashingTime);
         rb.gravityScale = originalGravity;
         isDashing = false;
-        animator.SetBool("IsDash", false);
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
