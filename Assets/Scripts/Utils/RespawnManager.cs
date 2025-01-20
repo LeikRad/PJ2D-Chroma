@@ -7,7 +7,8 @@ public class RespawnManager : MonoBehaviour
     public static RespawnManager Instance;
     public string benchSceneName;
     public static Vector3 benchRespawnPosition;
-    private Scene currentScene;
+    private Scene thisScene;
+    public Scene currentScene;
 
     private void Awake()
     {
@@ -24,11 +25,14 @@ public class RespawnManager : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(benchSceneName))
         {
-            currentScene = SceneManager.GetSceneAt(1);
-            SceneManager.UnloadSceneAsync(currentScene);
+            currentScene = SceneChanger.Instance.currentScene;
+            thisScene = SceneManager.GetSceneAt(1);
+            SceneManager.UnloadSceneAsync(thisScene);
             SceneManager.LoadSceneAsync(benchSceneName, LoadSceneMode.Additive);
             Player.Instance.transform.position = benchRespawnPosition;
-            currentScene = SceneManager.GetSceneByName(benchSceneName);
+            PlayerHealth playerHealth = Player.Instance.GetComponent<PlayerHealth>();
+            playerHealth.RestoreHealth();
+            SceneChanger.Instance.SetCurrentScene(SceneManager.GetSceneByName(benchSceneName));
         }
         else
         {
