@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class RestBench : MonoBehaviour
 {
-    //private Animator player_animator = Player.Instance.GetComponent<Animator>();
+    
     public string benchSceneName;
 
     private void Start()
@@ -14,14 +14,16 @@ public class RestBench : MonoBehaviour
 
     private void Update()
     {
+        Animator player_animator = Player.Instance.GetComponent<Animator>();
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, Player.Instance.transform.position) < 2f)
         {
             SitAndRest();
-            //player_animator.SetBool("IsBench", true);
+            player_animator.SetBool("IsBench", true);
+            Debug.Log("Player is resting");
         }
         else
         {
-            //player_animator.SetBool("IsBench", false);
+            player_animator.SetBool("IsBench", false);
         }
     }
 
