@@ -1,31 +1,49 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RespawnController : MonoBehaviour
 {
-    public float attackDamage = 10f;
-    public Transform respawnPoint; 
+    public float attackDamage = 10f; 
+    public Transform respawnPoint;
+    private BossStateMachine boss;
+
+    private void Awake()
+    {
+        boss = FindObjectOfType<BossStateMachine>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+
+            if (playerHealth != null && CompareTag("BossLava"))
             {
                 playerHealth.TakeDamage(attackDamage, null);
-                RespawnManager.Instance.SetCheckpointRespawnPoint(respawnPoint.position);
+                {
+                    if (playerHealth.GetHealth() > 0)
+                    {
+                        boss.ResetPhaseFour();
+                    }
+                    else
+                    {
+                        playerHealth.Death();
+                    }
+                }
+            }
+            else
+                playerHealth.TakeDamage(attackDamage, null);
+            {
                 if (playerHealth.GetHealth() > 0)
                 {
                     collision.transform.position = respawnPoint.position;
                 }
                 else
                 {
-                    RespawnManager.Instance.RespawnPlayerAtBench();
+                    playerHealth.Death();
                 }
-            }
-            else
-            {
-                Debug.LogWarning("PlayerHealth component is missing on the Player.");
             }
         }
     }

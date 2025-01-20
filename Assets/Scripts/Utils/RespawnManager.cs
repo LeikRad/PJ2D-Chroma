@@ -1,105 +1,42 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RespawnManager : MonoBehaviour
 {
     public static RespawnManager Instance;
-
-    private Transform lastCheckpointRespawnPoint; 
-    private Transform benchRespawnPoint; 
-    private string specificSceneName = "Room_1.1"; 
+    public string benchSceneName;
+    public static Vector3 benchRespawnPosition;
+    private Scene thisScene;
+    public Scene currentScene;
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
-    public void SetCheckpointRespawnPoint(Vector3 checkpointPosition)
+    public void SetBenchRespawnPoint(string sceneName, Vector3 position)
     {
-        lastCheckpointRespawnPoint = new GameObject("LastCheckpoint").transform;
-        lastCheckpointRespawnPoint.position = checkpointPosition;
+        benchSceneName = sceneName;
+        benchRespawnPosition = position;
     }
-
-    public void SetBenchRespawnPoint(Transform benchTransform)
+    public void RespawnPlayer()
     {
-        benchRespawnPoint = benchTransform;
-    }
-
-    public void RespawnPlayerAtBench()
-    {
-        if (benchRespawnPoint != null)
+        if (!string.IsNullOrEmpty(benchSceneName))
         {
-            // Certifique-se de que a MasterScene permanece carregada
-            SceneManager.LoadScene("MasterScene", LoadSceneMode.Additive); 
-            SceneManager.sceneLoaded += OnSceneLoadedAtBench;
-            // Carregar a cena específica sem descarregar a MasterScene
-            SceneManager.LoadScene(specificSceneName); 
-        }
-        else
-        {
-            Debug.LogWarning("No bench respawn point set. Respawning at checkpoint.");
-            RespawnPlayerAtCheckpoint();
-        }
-    }
-
-    public void RespawnPlayerAtCheckpoint()
-    {
-        if (lastCheckpointRespawnPoint != null)
-        {
-            // Certifique-se de que a MasterScene permanece carregada
-            SceneManager.LoadScene("MasterScene", LoadSceneMode.Additive);
-            SceneManager.sceneLoaded += OnSceneLoadedAtCheckpoint;
-            // Carregar a cena específica sem descarregar a MasterScene
-            SceneManager.LoadScene(specificSceneName);
-        }
-        else
-        {
-            Debug.LogWarning("No checkpoint set. Cannot respawn.");
-        }
-    }
-
-    private void OnSceneLoadedAtBench(Scene scene, LoadSceneMode mode)
-    {
-        GameObject player = Player.Instance.gameObject;
-        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-
-        if (playerHealth != null)
-        {
-            player.SetActive(true);
-            player.transform.position = benchRespawnPoint.position;
+            currentScene = SceneChanger.Instance.currentScene;
+            thisScene = SceneManager.GetSceneAt(1);
+            SceneManager.UnloadSceneAsync(thisScene);
+            SceneManager.LoadSceneAsync(benchSceneName, LoadSceneMode.Additive);
+            Player.Instance.transform.position = benchRespawnPosition;
+            PlayerHealth playerHealth = Player.Instance.GetComponent<PlayerHealth>();
             playerHealth.RestoreHealth();
+            SceneChanger.Instance.SetCurrentScene(SceneManager.GetSceneByName(benchSceneName));
         }
         else
         {
-            Debug.LogError("PlayerHealth script not found on Player object.");
+            Debug.LogWarning("No bench scene name set. Could not respawn.");
         }
-
-        SceneManager.sceneLoaded -= OnSceneLoadedAtBench;
-    }
-
-    private void OnSceneLoadedAtCheckpoint(Scene scene, LoadSceneMode mode)
-    {
-        GameObject player = Player.Instance.gameObject;
-        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-
-        if (playerHealth != null)
-        {
-            player.SetActive(true);
-            player.transform.position = lastCheckpointRespawnPoint.position;
-            playerHealth.RestoreHealth();
-        }
-        else
-        {
-            Debug.LogError("PlayerHealth script not found on Player object.");
-        }
-
-        SceneManager.sceneLoaded -= OnSceneLoadedAtCheckpoint;
     }
 }
