@@ -29,6 +29,8 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Room_1.2.unity
   - m_enabled: 1
+    m_path: Assets/Scenes/Room_1.3.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/EnemyTest.unity
   - m_enabled: 1
     m_path: Assets/Scenes/EnemyTest 1.unity

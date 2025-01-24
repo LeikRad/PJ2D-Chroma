@@ -21,7 +21,7 @@ public class RespawnController : MonoBehaviour
 
             if (playerHealth != null && CompareTag("BossLava"))
             {
-                playerHealth.TakeDamage(attackDamage, null);
+                playerHealth.TakeDamage(attackDamage, transform);
                 {
                     if (playerHealth.GetHealth() > 0)
                     {

@@ -12,7 +12,7 @@ public class LegDamage : MonoBehaviour
             PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
             if (player != null)
             {
-                player.TakeDamage(damage, null);
+                player.TakeDamage(damage, transform);
                 if (player.GetHealth() <= 0)
                 {
                     player.Death();

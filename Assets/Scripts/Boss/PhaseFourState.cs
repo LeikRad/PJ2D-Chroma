@@ -5,8 +5,7 @@ public class PhaseFourState : BossBaseState
     private float bossSpeed = 4f;
     private bool playerReachedFinalPlatform = false;
     private PlayerHealth playerHealth;
-    private string benchSceneName;
-    private Vector3 benchRespawnPosition;
+    private Player player;
 
     public PhaseFourState(BossStateMachine boss) : base(boss) { }
 
@@ -18,6 +17,7 @@ public class PhaseFourState : BossBaseState
         boss.Health = 1; 
         SpawnPlatformsToFinalPlatform();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     public override void Update()
@@ -45,7 +45,7 @@ public class PhaseFourState : BossBaseState
 
     private void SpawnPlatformsToFinalPlatform()
     {
-        Vector3 spawnPosition = boss.PlatformSpawnPoint.position;
+        Vector3 spawnPosition = new Vector3(boss.transform.position.x, boss.transform.position.y - 3f, boss.transform.position.z);
         while (spawnPosition.y < boss.FinalPlatform.transform.position.y - boss.BossFinalHeightOffset)
         {
             float horizontalOffset = Random.Range(-boss.PlatformHorizontalVariation, boss.PlatformHorizontalVariation);
@@ -57,6 +57,6 @@ public class PhaseFourState : BossBaseState
     
     public override void Exit()
     {
-        Debug.Log("Exiting Final Phase");
+        
     }
 }

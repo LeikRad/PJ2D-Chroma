@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -41,11 +42,11 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform wallCheck;
 
-    private bool canMove = true;
-    private Vector3 velocity;
+    public bool canMove = true;
     private bool isGrounded;
     public Animator animator;
     private PlayerWeapon playerWeapon;
+    public PlatformerActivator platformActivator;
 
     public static Player Instance { get; private set; }
 
@@ -109,6 +110,15 @@ public class Player : MonoBehaviour
         if (!isWallJumping)
         {
             Flip();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            GameManager.Instance.SaveGame();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            GameManager.Instance.LoadGame();
         }
     }
 
@@ -265,11 +275,9 @@ public class Player : MonoBehaviour
         // TODO: Fix this bug fast
         canMove = false;
         Vector2 difference = (transform.position - attacker.transform.position).normalized;
-        Debug.Log("Diff: " + difference);
         Vector2 force = difference * 10;
-        Debug.Log("Force: " + force);
-        rb.linearVelocity = Vector2.zero; // Reset current velocity
-        rb.AddForce(force, ForceMode2D.Impulse);
+        rb.linearVelocity = Vector2.zero; 
+        rb.linearVelocity = force;
         StartCoroutine(KnockbackTimer());
         animator.SetBool("IsHurt", true);
     }
@@ -277,8 +285,36 @@ public class Player : MonoBehaviour
     private IEnumerator KnockbackTimer()
     {
         yield return new WaitForSeconds(0.4f);
+        Debug.Log("Knockback Timer");
         canMove = true;
         animator.SetBool("IsHurt", false);
     }
     
+    public void Save(ref SaveSystem.SaveData data)
+    {
+        data.PlayerPosition = transform.position;
+        data.PlayerHealth = GetComponent<PlayerHealth>().currentHealth;
+        data.HasWeapon = GetComponent<PlayerWeapon>().equippedWeapon != null;
+    }
+
+    public void Load(SaveSystem.SaveData data)
+    {
+        transform.position = data.PlayerPosition;
+        GetComponent<PlayerHealth>().currentHealth = data.PlayerHealth;
+
+        if (data.HasWeapon)
+        {
+            GetComponent<PlayerWeapon>().EquipDefaultWeapon();
+        }
+    }
 }
+
+[System.Serializable]
+public struct PlayerSaveData
+{
+    public Vector3 Position;
+    public float Health;
+    public bool HasWeapon;
+    
+}
+    

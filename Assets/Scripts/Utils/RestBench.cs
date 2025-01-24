@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEditor;
 
 public class RestBench : MonoBehaviour
 {
-    //private Animator player_animator = Player.Instance.GetComponent<Animator>();
     public string benchSceneName;
 
     private void Start()
@@ -16,12 +17,10 @@ public class RestBench : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, Player.Instance.transform.position) < 2f)
         {
+            Animator player_animator = Player.Instance.GetComponent<Animator>();
+            player_animator.SetBool("IsBench", true);
             SitAndRest();
-            //player_animator.SetBool("IsBench", true);
-        }
-        else
-        {
-            //player_animator.SetBool("IsBench", false);
+            StartCoroutine(Rest());
         }
     }
 
@@ -29,6 +28,15 @@ public class RestBench : MonoBehaviour
     {
         PlayerHealth playerHealth = Player.Instance.GetComponent<PlayerHealth>();
         playerHealth.RestoreHealth();
+        Player.Instance.canMove = false;
         RespawnManager.Instance.SetBenchRespawnPoint(benchSceneName, transform.position);
+        SaveSystem.Save();
+    }
+    
+    private IEnumerator Rest()
+    {
+        yield return new WaitForSeconds(1f);
+        Player.Instance.canMove = true;
+        Player.Instance.GetComponent<Animator>().SetBool("IsBench", false);
     }
 }

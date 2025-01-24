@@ -3,6 +3,22 @@
 public class WeaponPickup : MonoBehaviour
 {
     public GameObject weaponPrefab;
+    
+    private void Start()
+    {
+        Invoke(nameof(CheckWeapon), 0.1f);
+    }
+    
+    private void CheckWeapon()
+    {
+        PlayerWeapon playerWeapon = FindObjectOfType<PlayerWeapon>();
+        playerWeapon = FindObjectOfType<PlayerWeapon>();
+        if (playerWeapon != null && playerWeapon.equippedWeapon != null)
+        {
+            EquipWeapon(playerWeapon);
+            Destroy(gameObject);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,5 +46,6 @@ public class WeaponPickup : MonoBehaviour
         playerWeapon.rotationPoint = newWeapon.transform.Find("RotationPoint");
         newWeapon.transform.localPosition -= playerWeapon.rotationPoint.localPosition;
         Destroy(gameObject);
+        GameManager.Instance.SaveGame(); 
     }
 }

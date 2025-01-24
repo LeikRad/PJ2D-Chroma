@@ -32,8 +32,36 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Fire()
     {
+        if (firePoint == null)
+        {
+            FindFirePoint(); 
+        }
+
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = firePoint.right * bulletSpeed;
+    }
+
+    public void EquipDefaultWeapon()
+    {
+        if (equippedWeapon != null)
+        {
+            Destroy(equippedWeapon);
+        }
+        
+        GameObject weaponPrefab = Resources.Load<GameObject>("Prefabs/Weapon/DefaultWeapon"); 
+        equippedWeapon = Instantiate(weaponPrefab, weaponHolder);
+        equippedWeapon.transform.localPosition = Vector3.zero;
+        equippedWeapon.transform.localRotation = Quaternion.identity;
+        FindFirePoint(); 
+    }
+
+    private void FindFirePoint()
+    {
+        if (equippedWeapon != null)
+        {
+            firePoint = equippedWeapon.transform.Find("FirePoint");
+            rotationPoint = equippedWeapon.transform.Find("RotationPoint");
+        }
     }
 }

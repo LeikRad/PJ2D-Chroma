@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerHealth : Health
@@ -6,9 +7,10 @@ public class PlayerHealth : Health
     public Animator animator;
     private DamageFlash damageFlash;
 
-    public float invulnerabilityTime = 1.5f; 
+    public float invulnerabilityTime = 1f; 
     private float invulnerabilityTimer = 0f; 
     private bool isInvulnerable = false;
+    private Collider2D lastAttacker;
 
     public new void Start()
     {
@@ -25,6 +27,7 @@ public class PlayerHealth : Health
             if (invulnerabilityTimer <= 0)
             {
                 isInvulnerable = false;
+                Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), lastAttacker, false);
             }
         }
     }
@@ -35,8 +38,9 @@ public class PlayerHealth : Health
         {
             return;
         }
-
         base.TakeDamage(amount);
+        lastAttacker = attacker.GetComponent<Collider2D>();
+        Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), lastAttacker, true);
         Debug.Log($"Player took {amount} damage! Current health: {currentHealth}");
         isInvulnerable = true;
         invulnerabilityTimer = invulnerabilityTime; 

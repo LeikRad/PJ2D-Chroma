@@ -6,7 +6,7 @@ public class DeathState : BossBaseState
 
     public override void Enter()
     {
-        Debug.Log("Boss Defeated");
+        boss.Die();
     }
 
     public override void Update() { }
