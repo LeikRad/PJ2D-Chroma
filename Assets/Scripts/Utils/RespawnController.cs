@@ -1,27 +1,48 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RespawnController : MonoBehaviour
 {
-    public float attackDamage = 10f;
-    public Transform respawnPoint; // Ponto de respawn para a área específica (lava)
+    public float attackDamage = 10f; 
+    public Transform respawnPoint;
+    private BossStateMachine boss;
+
+    private void Awake()
+    {
+        boss = FindObjectOfType<BossStateMachine>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+
+            if (playerHealth != null && CompareTag("BossLava"))
             {
-                // Aplica dano ao jogador
-                playerHealth.TakeDamage(attackDamage, null);
-
-                // Teleporta o jogador para o ponto de respawn da área (não altera o ponto de respawn geral)
-                collision.transform.position = respawnPoint.position;
-
-                // Se a saúde chegar a 0, o jogador morre e renasce no ponto geral
-                if (playerHealth.GetHealth() <= 0)
+                playerHealth.TakeDamage(attackDamage, transform);
                 {
-                    GameManager.Instance.RespawnPlayer();
+                    if (playerHealth.GetHealth() > 0)
+                    {
+                        boss.ResetPhaseFour();
+                    }
+                    else
+                    {
+                        playerHealth.Death();
+                    }
+                }
+            }
+            else
+                playerHealth.TakeDamage(attackDamage, null);
+            {
+                if (playerHealth.GetHealth() > 0)
+                {
+                    collision.transform.position = respawnPoint.position;
+                }
+                else
+                {
+                    playerHealth.Death();
                 }
             }
         }

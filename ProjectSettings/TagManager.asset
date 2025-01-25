@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - Platform
   - Floor
+  - Boss
+  - BossLava
   layers:
   - Default
   - TransparentFX

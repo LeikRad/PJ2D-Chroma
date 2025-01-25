@@ -4173,15 +4173,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8710145898837760842, guid: 014fa4683bff63146aaf25354e49c9c3, type: 3}
       propertyPath: sceneName
-      value: Room_1.3
+      value: EnemyTest
       objectReference: {fileID: 0}
     - target: {fileID: 8710145898837760842, guid: 014fa4683bff63146aaf25354e49c9c3, type: 3}
       propertyPath: playerPosition.x
-      value: -37.5
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 8710145898837760842, guid: 014fa4683bff63146aaf25354e49c9c3, type: 3}
       propertyPath: playerPosition.y
-      value: 4.7
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

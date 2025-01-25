@@ -5594,6 +5594,7 @@ GameObject:
   - component: {fileID: 376387381}
   - component: {fileID: 376387380}
   - component: {fileID: 376387379}
+  - component: {fileID: 376387382}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -5613,7 +5614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c273e46b5ef43d6896fe48294ae8971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthRecoveryAmount: 30
+  benchSceneName: 
 --- !u!212 &376387380
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5684,6 +5685,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &376387382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376387378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c273e46b5ef43d6896fe48294ae8971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  benchSceneName: 
 --- !u!1 &378891606
 GameObject:
   m_ObjectHideFlags: 0
@@ -13135,6 +13149,7 @@ GameObject:
   - component: {fileID: 1098583789}
   - component: {fileID: 1098583788}
   - component: {fileID: 1098583787}
+  - component: {fileID: 1098583790}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -13154,7 +13169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c273e46b5ef43d6896fe48294ae8971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthRecoveryAmount: 30
+  benchSceneName: 
 --- !u!212 &1098583788
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13200,7 +13215,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.57254905}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13225,6 +13240,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1098583790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098583786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c273e46b5ef43d6896fe48294ae8971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  benchSceneName: 
 --- !u!1 &1103933380
 GameObject:
   m_ObjectHideFlags: 0
