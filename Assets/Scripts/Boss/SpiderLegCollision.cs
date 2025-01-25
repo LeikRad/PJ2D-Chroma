@@ -6,7 +6,6 @@ public class SpiderLegCollision : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Player hit by swoop attack!");
             PlayerHealth player = collision.GetComponent<PlayerHealth>();
             if (player != null)
             {
@@ -17,5 +16,10 @@ public class SpiderLegCollision : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Collision detected");
     }
 }

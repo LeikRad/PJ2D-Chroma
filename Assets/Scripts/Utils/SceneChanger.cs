@@ -40,8 +40,6 @@ public class SceneChanger : MonoBehaviour
 
         GameObject player = GameObject.FindWithTag("Player");
         yield return new WaitForSeconds(fade.timeToFade);
-
-        // Verifica se a cena atual ainda está carregada antes de descarregar
         if (SceneManager.sceneCount > 1)
         {
             Scene oldScene = SceneManager.GetSceneAt(1);
@@ -51,8 +49,6 @@ public class SceneChanger : MonoBehaviour
                 yield return SceneManager.UnloadSceneAsync(oldScene);
             }
         }
-
-        // Carrega a nova cena
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         while (!asyncLoad.isDone)
         {
@@ -66,8 +62,6 @@ public class SceneChanger : MonoBehaviour
 
         fade.fadeOut();
         yield return new WaitForSeconds(fade.timeToFade);
-
-        // Define a nova cena como ativa
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
 
         Debug.Log("Cena carregada: " + sceneName);

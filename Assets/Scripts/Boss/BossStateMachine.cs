@@ -29,7 +29,6 @@ public class BossStateMachine : MonoBehaviour
     public Transform BossStopPoint;
     public Vector3 PhaseFourStartPosition;
     public bool BossDefeated = false; 
-    public bool PlatformsSpawned = false;
     private Scene thisScene;
     private string currentScene;
 
@@ -81,7 +80,7 @@ public class BossStateMachine : MonoBehaviour
         currentScene = SceneManager.GetSceneAt(1).name;
         SceneManager.UnloadSceneAsync(thisScene);
         SceneManager.LoadSceneAsync(currentScene, LoadSceneMode.Additive);
-        CurrentState = PhaseFour;
+        TransitionToState(PhaseFour);
     }
     
     public void TakeDamage(float damageAmount)

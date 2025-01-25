@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7148889348399890702}
   - component: {fileID: -6676317513541438652}
   - component: {fileID: 2725802281738359724}
-  - component: {fileID: 3288801072827159389}
+  - component: {fileID: 3534256958394299611}
   m_Layer: 0
   m_Name: SpiderLeg
   m_TagString: Enemy
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
---- !u!50 &3288801072827159389
+--- !u!50 &3534256958394299611
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0

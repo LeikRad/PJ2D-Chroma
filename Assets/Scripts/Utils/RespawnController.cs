@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class RespawnController : MonoBehaviour
 {
@@ -15,35 +13,30 @@ public class RespawnController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player")) 
         {
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            
+            playerHealth.TakeDamage(attackDamage, transform);
+            Debug.Log("Player hit by lava!");
 
-            if (playerHealth != null && CompareTag("BossLava"))
+            if (gameObject.CompareTag("BossLava")) 
             {
-                playerHealth.TakeDamage(attackDamage, transform);
+                if (boss != null)
                 {
-                    if (playerHealth.GetHealth() > 0)
-                    {
-                        boss.ResetPhaseFour();
-                    }
-                    else
-                    {
-                        playerHealth.Death();
-                    }
+                    boss.ResetPhaseFour();
+                }
+            }
+            if (playerHealth.GetHealth() > 0)
+            {
+                if (respawnPoint != null)
+                {
+                    collision.transform.position = respawnPoint.position; 
                 }
             }
             else
-                playerHealth.TakeDamage(attackDamage, null);
             {
-                if (playerHealth.GetHealth() > 0)
-                {
-                    collision.transform.position = respawnPoint.position;
-                }
-                else
-                {
-                    playerHealth.Death();
-                }
+                playerHealth.Death();
             }
         }
     }

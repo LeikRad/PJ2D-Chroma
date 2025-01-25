@@ -36,7 +36,8 @@ public class RespawnManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No bench scene name set. Could not respawn.");
+            Debug.LogError("Bench respawn point not set!");
+            Application.Quit();
         }
     }
 }
