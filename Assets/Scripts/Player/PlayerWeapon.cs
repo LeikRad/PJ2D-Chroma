@@ -5,7 +5,6 @@ public class PlayerWeapon : MonoBehaviour
     public Transform weaponHolder;
     public GameObject equippedWeapon;
     public Transform firePoint;
-    public Transform rotationPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10f;
 

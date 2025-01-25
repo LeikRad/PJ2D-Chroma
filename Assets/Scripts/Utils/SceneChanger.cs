@@ -7,7 +7,7 @@ public class SceneChanger : MonoBehaviour
 {
     public static SceneChanger Instance { get; private set; }
     
-    public Scene currentScene;
+    private Scene currentScene;
     private FadeInOut fade;
     private void Awake()
     {
@@ -22,11 +22,6 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
         currentScene = SceneManager.GetSceneAt(1);
         Debug.Log("Current Scene: " + currentScene.name);
-    }
-    
-    public void SetCurrentScene(Scene scene)
-    {
-        currentScene = scene;
     }
     
     public void ChangeScene(string sceneName, Vector3 position)

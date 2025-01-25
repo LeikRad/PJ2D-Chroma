@@ -17,14 +17,6 @@ MonoBehaviour:
   m_Subtarget: 2
   m_PlatformId: 4e3c793746204150860bf175a9a41a05
   m_PlatformBuildProfile:
-    rid: 3952611657408839759
-  m_OverrideGlobalSceneList: 1
-  m_Scenes:
-  - m_enabled: 1
-    m_path: Assets/Scenes/MasterScene.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/MainMenu.unity
-  - m_enabled: 1
     rid: 7523092172052103252
   m_OverrideGlobalSceneList: 1
   m_Scenes:
@@ -39,16 +31,6 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Room_1.2.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/EnemyTest.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/EnemyTest 1.unity
-  m_ScriptingDefines: []
-  m_PlayerSettingsYaml:
-    m_Settings: []
-  references:
-    version: 2
-    RefIds:
-    - rid: 3952611657408839759
     m_path: Assets/Scenes/Room_1.3.unity
   - m_enabled: 1
     m_path: Assets/Scenes/EndScene.unity

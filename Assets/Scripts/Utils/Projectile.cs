@@ -12,7 +12,6 @@ public class Projectile : MonoBehaviour
     {
         startPosition = transform.position;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocity = transform.right * speed; // Certifique-se de que o projétil está se movendo
     }
 
     private void Update()
@@ -25,18 +24,9 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Boss"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            BossStateMachine boss = collision.gameObject.GetComponent<BossStateMachine>();
-            if (boss != null)
-            {
-                boss.TakeDamage(damage);
-            }
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.CompareTag("Enemy"))
-        {
-            collision.gameObject.GetComponent<Health>()?.TakeDamage(damage);
+            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
             Destroy(gameObject);
         }
         else
