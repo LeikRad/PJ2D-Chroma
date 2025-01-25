@@ -292,7 +292,9 @@ MonoBehaviour:
     m_Bits: 256
   groundCheck: {fileID: 8314275568169796139}
   wallCheck: {fileID: 4126129468561719546}
+  canMove: 1
   animator: {fileID: 2301948987361897729}
+  platformActivator: {fileID: 0}
 --- !u!114 &1677265072451427674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
+  currentHealth: 0
   animator: {fileID: 2301948987361897729}
   invulnerabilityTime: 1.5
 --- !u!114 &7003637994777776472

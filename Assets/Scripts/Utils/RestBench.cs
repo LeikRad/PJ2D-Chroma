@@ -17,8 +17,7 @@ public class RestBench : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, Player.Instance.transform.position) < 2f)
         {
-            Animator player_animator = Player.Instance.GetComponent<Animator>();
-            player_animator.SetBool("IsBench", true);
+            Player.Instance.GetComponent<Animator>().SetBool("isBench", true);
             SitAndRest();
             StartCoroutine(Rest());
         }
@@ -37,6 +36,6 @@ public class RestBench : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Player.Instance.canMove = true;
-        Player.Instance.GetComponent<Animator>().SetBool("IsBench", false);
+        Player.Instance.GetComponent<Animator>().SetBool("isBench", false);
     }
 }

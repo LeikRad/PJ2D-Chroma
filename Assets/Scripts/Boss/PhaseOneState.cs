@@ -38,7 +38,7 @@ public class PhaseOneState : BossBaseState
         if (boss.SpiderLeg != null)
         {
             bool spawnFromRight = Random.Range(0, 2) == 0;
-            float yPosition = boss.transform.position.y - 3f; 
+            float yPosition = boss.transform.position.y - 3.72f; 
             float startX = spawnFromRight ? 10f : -10f; 
             float endX = spawnFromRight ? -10f : 10f; 
 
