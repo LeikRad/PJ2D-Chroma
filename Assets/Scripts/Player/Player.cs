@@ -22,8 +22,8 @@ public class Player : MonoBehaviour
     public float dashingForce = 10f;
     public float dashingTime = 0.2f;
     public float dashingCooldown = 1f;
-    private bool canDash = true;
-    private bool isDashing;
+    public bool canDash = true;
+    public bool isDashing;
     
     // Wall Sliding and Jumping
     public float wallSlideSpeed = 1f;
@@ -47,6 +47,8 @@ public class Player : MonoBehaviour
     public Animator animator;
     private PlayerWeapon playerWeapon;
 
+    private Health health;
+
     public static Player Instance { get; private set; }
 
     void Awake() {
@@ -62,53 +64,70 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerWeapon = GetComponent<PlayerWeapon>();
+        health = GetComponent<Health>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDashing || !canMove)
+        if (health.currentHealth > 0)
         {
-            return;
-        }
-        IsGroundedCheck();
 
-        // limit player falling speed
-        if (rb.linearVelocityY < terminalVelocity)
-        {
-            rb.linearVelocityY = terminalVelocity;
-        }
-        
-        if (isGrounded)
-        {
-            // TODO: fix bug here of animation
-            jumpCount = 0;
-            animator.SetBool("IsJumping", false);
-        }
-        
-        horizontal = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
-        
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-        }
-        
-        if (Input.GetButtonDown("Jump") && rb.linearVelocityY > 0){
-            rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY * 0.5f);
-        }
-        
-        // TODO: Input map this 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            StartCoroutine(Dash());
-        }
-        
-        WallSlide();
-        WallJump();
-        if (!isWallJumping)
-        {
-            Flip();
+            if (isDashing || !canMove)
+            {
+                return;
+            }
+            IsGroundedCheck();
+
+            // limit player falling speed
+            if (rb.linearVelocityY < terminalVelocity)
+            {
+                rb.linearVelocityY = terminalVelocity;
+            }
+
+            if (isGrounded)
+            {
+                jumpCount = 0;
+            }
+
+            horizontal = Input.GetAxisRaw("Horizontal");
+            animator.SetFloat("Speed", Mathf.Abs(horizontal));
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                Jump();
+                animator.SetBool("IsJumping", true);
+
+            }
+
+            if (Input.GetButtonDown("Jump") && rb.linearVelocityY > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY * 0.5f);
+            }
+
+            // TODO: Input map this 
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            {
+                StartCoroutine(Dash());
+                animator.SetBool("isDash", true);
+            }
+            else
+            {
+                animator.SetBool("isDash", false);
+            }
+
+            WallSlide();
+            WallJump();
+            if (!isWallJumping)
+            {
+                Flip();
+            }
+
+            //jumping bug
+            if (rb.linearVelocityY <= 0)
+            {
+                animator.SetBool("IsJumping", false);
+            }
         }
     }
 
@@ -120,7 +139,7 @@ public class Player : MonoBehaviour
         }
         jumpCount++;
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
-        animator.SetBool("IsJumping", true);
+        //animator.SetBool("IsJumping", true);
         return;
     }
 
@@ -190,10 +209,12 @@ public class Player : MonoBehaviour
             isWallSliding = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x,
                 Mathf.Clamp(rb.linearVelocity.y, -wallSlideSpeed, float.MaxValue));
+            animator.SetBool("IsWallSlide", true);
         }
         else
         {
             isWallSliding = false;
+            animator.SetBool("IsWallSlide", false);
         }
     }
 
