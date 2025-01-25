@@ -4,6 +4,7 @@ using System.Collections;
 public class Health : MonoBehaviour
 {
     public float maxHealth = 100f;
+    protected float currentHealth;
     public float currentHealth;
     public float invulnerabilityDuration = 3f; 
     private bool isInvulnerable = false; 
@@ -23,13 +24,12 @@ public class Health : MonoBehaviour
         play_animator.SetBool("Died", false);
     }
 
-    public virtual void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
-        if (isInvulnerable) return; 
 
         currentHealth -= amount;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && CompareTag("Enemy"))
         {
             Die();
 
@@ -57,32 +57,5 @@ public class Health : MonoBehaviour
     public float GetHealth()
     {
         return currentHealth;
-    }
-
-    private IEnumerator InvulnerabilityTimer()
-    {
-        isInvulnerable = true;
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject enemy in enemies)
-        {
-            Collider2D enemyCollider = enemy.GetComponent<Collider2D>();
-            if (enemyCollider != null && objectCollider != null)
-            {
-                Physics2D.IgnoreCollision(objectCollider, enemyCollider, true);
-            }
-        }
-
-        yield return new WaitForSeconds(invulnerabilityDuration);
-        
-        foreach (GameObject enemy in enemies)
-        {
-            Collider2D enemyCollider = enemy.GetComponent<Collider2D>();
-            if (enemyCollider != null && objectCollider != null)
-            {
-                Physics2D.IgnoreCollision(objectCollider, enemyCollider, false);
-            }
-        }
-
-        isInvulnerable = false;
     }
 }

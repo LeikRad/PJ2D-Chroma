@@ -308,9 +308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e5ddbc02914ca9aa1f8d47f6d3727c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  invulnerabilityDuration: 5
+  maxHealth: 30
   animator: {fileID: 2301948987361897729}
+  invulnerabilityTime: 1.5
 --- !u!114 &7003637994777776472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,6 +326,7 @@ MonoBehaviour:
   weaponHolder: {fileID: 8697332088275871174}
   equippedWeapon: {fileID: 0}
   firePoint: {fileID: 0}
+  rotationPoint: {fileID: 0}
   bulletPrefab: {fileID: 8579842486537473455, guid: 06be65270deabf2449f251dd2de829b5, type: 3}
   bulletSpeed: 10
 --- !u!95 &2301948987361897729
