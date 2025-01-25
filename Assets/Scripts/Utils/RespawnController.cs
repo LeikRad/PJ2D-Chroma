@@ -1,48 +1,23 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class RespawnController : MonoBehaviour
 {
-    public float attackDamage = 10f; 
+    public float attackDamage = 10f;
+    private bool isPlayerAlive = true;
     public Transform respawnPoint;
-    private BossStateMachine boss;
-
-    private void Awake()
-    {
-        boss = FindObjectOfType<BossStateMachine>();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            Health playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(attackDamage, null);
 
-            if (playerHealth != null && CompareTag("BossLava"))
-            {
-                playerHealth.TakeDamage(attackDamage, null);
+                if (playerHealth.GetHealth() <= 0)
                 {
-                    if (playerHealth.GetHealth() > 0)
-                    {
-                        boss.ResetPhaseFour();
-                    }
-                    else
-                    {
-                        playerHealth.Death();
-                    }
-                }
-            }
-            else
-                playerHealth.TakeDamage(attackDamage, null);
-            {
-                if (playerHealth.GetHealth() > 0)
-                {
-                    collision.transform.position = respawnPoint.position;
-                }
-                else
-                {
-                    playerHealth.Death();
+                    isPlayerAlive = false;
                 }
             }
             Debug.Log(respawnPoint.position);

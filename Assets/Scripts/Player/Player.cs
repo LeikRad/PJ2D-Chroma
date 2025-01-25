@@ -45,7 +45,6 @@ public class Player : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     public Animator animator;
-    private PlayerWeapon playerWeapon;
 
     private Health health;
 
@@ -63,7 +62,6 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-        playerWeapon = GetComponent<PlayerWeapon>();
         health = GetComponent<Health>();
     }
 
@@ -240,7 +238,7 @@ public class Player : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1;
             transform.localScale = localScale;
-            playerWeapon.weaponHolder.localScale = new Vector3(isFacingRight ? 1 : -1, 1, 1);
+            // rotate weaponholder
         }
     }   
 
