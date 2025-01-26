@@ -149,10 +149,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a4a3326f8f383a84eb93f55cc7e99fd1
-      internalID: -165273440
+      spriteID: d041434bda19272b0800000000000000
+      internalID: -5588244012374682611
       vertices: []
       indices: 
       edges: []
@@ -171,10 +171,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d046a527dd8b07a4a9001a50f34db79d
-      internalID: 1877549017
+      spriteID: 8e3e84abc3d23cb50800000000000000
+      internalID: 6612178416756646888
       vertices: []
       indices: 
       edges: []
@@ -193,10 +193,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fcd4885630c1ded4fa52920adea5e1b7
-      internalID: -1340951410
+      spriteID: dd3d5e0f3fbedb570800000000000000
+      internalID: 8484196705987056605
       vertices: []
       indices: 
       edges: []
@@ -215,10 +215,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5e4635ff6b6f15e4f98ed0c2f6e9ce1b
-      internalID: -969362357
+      spriteID: e65533c06969aea90800000000000000
+      internalID: -7283843876124404370
       vertices: []
       indices: 
       edges: []
@@ -237,10 +237,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2ab1c6516e234a2488142534579d252c
-      internalID: 2013164321
+      spriteID: 2d10b0db5e00ed6b0800000000000000
+      internalID: -5269773527257775662
       vertices: []
       indices: 
       edges: []
@@ -259,10 +259,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e80026d7db17d084fb54e08238712fbd
-      internalID: 155778291
+      spriteID: ef45247f620680800800000000000000
+      internalID: 578818272590451966
       vertices: []
       indices: 
       edges: []
@@ -281,10 +281,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c5ba2ee5cbc236b4ca7f61bac5f858a0
-      internalID: -2132519664
+      spriteID: 926c595c45195a2b0800000000000000
+      internalID: -5573889170522913239
       vertices: []
       indices: 
       edges: []
@@ -303,10 +303,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fc1ba91508281be439de574600b9c898
-      internalID: -1466723804
+      spriteID: d5ed7ebef96c4e530800000000000000
+      internalID: 3883447168860151389
       vertices: []
       indices: 
       edges: []
@@ -325,10 +325,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b9ab81df21965954a871f1d0759b7b27
-      internalID: -1977908144
+      spriteID: 96c543f7506538820800000000000000
+      internalID: 2919271565075176553
       vertices: []
       indices: 
       edges: []
@@ -349,8 +349,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4889f9307bc26424ca8f58a10d97dd91
-      internalID: 410160351
+      spriteID: a688dff2258d48646b7862a43a7bf386
+      internalID: 2820686468507147538
       vertices: []
       indices: 
       edges: []
@@ -371,8 +371,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5257cb3a2472014e9d7f20222113f37
-      internalID: -863973588
+      spriteID: 0e87908623512184cb431af6edaba1e3
+      internalID: -2008339589859012262
       vertices: []
       indices: 
       edges: []
@@ -393,8 +393,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee36ea7b81ad3fd41973781dfc7074d9
-      internalID: -1041509452
+      spriteID: e8174b68fa9344d469c294280dd03854
+      internalID: 4979236698213194097
       vertices: []
       indices: 
       edges: []
@@ -415,8 +415,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bebf396fe45d6342a84383fd752acf5
-      internalID: 985227636
+      spriteID: 97b0a0473fd10b44d816e423ad09023d
+      internalID: -7975947761236497633
       vertices: []
       indices: 
       edges: []
@@ -425,7 +425,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2ee7f816a6281aa4b9298dbd21229acc
+    spriteID: 4a26aee3643537a4dba04dc2dfe147e0
     internalID: 0
     vertices: []
     indices: 
@@ -435,19 +435,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      checkpoint_0: -165273440
-      checkpoint_1: 1877549017
-      checkpoint_10: -863973588
-      checkpoint_11: -1041509452
-      checkpoint_12: 985227636
-      checkpoint_2: -1340951410
-      checkpoint_3: -969362357
-      checkpoint_4: 2013164321
-      checkpoint_5: 155778291
-      checkpoint_6: -2132519664
-      checkpoint_7: -1466723804
-      checkpoint_8: -1977908144
-      checkpoint_9: 410160351
+      checkpoint_0: -5588244012374682611
+      checkpoint_1: 6612178416756646888
+      checkpoint_10: -2008339589859012262
+      checkpoint_11: 4979236698213194097
+      checkpoint_12: -7975947761236497633
+      checkpoint_2: 8484196705987056605
+      checkpoint_3: -7283843876124404370
+      checkpoint_4: -5269773527257775662
+      checkpoint_5: 578818272590451966
+      checkpoint_6: -5573889170522913239
+      checkpoint_7: 3883447168860151389
+      checkpoint_8: 2919271565075176553
+      checkpoint_9: 2820686468507147538
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
