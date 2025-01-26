@@ -9,6 +9,8 @@ public class PlayerWeapon : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 10f;
 
+    public InkMeter inkMeter; // Reference to the ink meter script
+
     void Update()
     {
         if (equippedWeapon)
@@ -16,7 +18,15 @@ public class PlayerWeapon : MonoBehaviour
             AimWeapon();
             if (Input.GetMouseButtonDown(0))
             {
-                Fire();
+                if (inkMeter != null && inkMeter.currentInk >= inkMeter.inkConsumption)
+                {
+                    Fire();
+                    inkMeter.ConsumeInk(); // Reduce ink when firing
+                }
+                else
+                {
+                    Debug.Log("Not enough ink to shoot!");
+                }
             }
         }
     }

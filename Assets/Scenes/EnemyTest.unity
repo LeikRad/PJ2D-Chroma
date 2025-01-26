@@ -363,7 +363,6 @@ MonoBehaviour:
   BossStopPoint: {fileID: 1633566610}
   PhaseFourStartPosition: {x: 0, y: 0, z: 0}
   BossDefeated: 0
-  PlatformsSpawned: 0
 --- !u!212 &70928509
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -442,6 +441,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5784965942556287074, guid: 83825f0a42eb2ca44b9564bd93f61518, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 7385216762860144290, guid: 83825f0a42eb2ca44b9564bd93f61518, type: 3}
+      propertyPath: 
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 174234325702908714, guid: 2f7149f9cd5c2764088576144dfcae81, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.131283
@@ -821,7 +828,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -997,11 +1004,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6146749991600963143, guid: 62693806d08bfa54eb165f61db35dc5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.1
+      value: -8.67
       objectReference: {fileID: 0}
     - target: {fileID: 6146749991600963143, guid: 62693806d08bfa54eb165f61db35dc5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.8
+      value: -2.77
       objectReference: {fileID: 0}
     - target: {fileID: 6146749991600963143, guid: 62693806d08bfa54eb165f61db35dc5e, type: 3}
       propertyPath: m_LocalPosition.z
