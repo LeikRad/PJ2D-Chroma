@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 2301948987361897729}
   - component: {fileID: 8766730469115390643}
   - component: {fileID: 2954022374049131516}
+  - component: {fileID: 348798432122638485}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -338,7 +339,7 @@ MonoBehaviour:
   rotationPoint: {fileID: 0}
   bulletPrefab: {fileID: 8579842486537473455, guid: 06be65270deabf2449f251dd2de829b5, type: 3}
   bulletSpeed: 10
-  inkMeter: {fileID: 0}
+  inkMeter: {fileID: 348798432122638485}
 --- !u!95 &2301948987361897729
 Animator:
   serializedVersion: 7
@@ -395,6 +396,23 @@ MonoBehaviour:
     m_Bits: 256
   _groundCheck: {fileID: 8314275568169796139}
   _animator: {fileID: 2301948987361897729}
+--- !u!114 &348798432122638485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085561184773944447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca80a20c53cd4f169d5d4d52cd68e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkMeter: {fileID: 0}
+  maxInk: 100
+  currentInk: 0
+  refillRate: 5
+  inkConsumption: 10
 --- !u!1 &4265597754725748466
 GameObject:
   m_ObjectHideFlags: 0
