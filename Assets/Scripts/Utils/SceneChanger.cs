@@ -55,7 +55,7 @@ public class SceneChanger : MonoBehaviour
             yield return null;
         }
 
-        if (player != null && position != Vector3.zero)
+        if (player != null)
         {
             player.transform.position = position;
         }

@@ -387,6 +387,115 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &252181629
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b1a21e81cd4fc44a6a212c7780bb55ab, type: 3}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: MenuMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e55ad06b730864644bf9231e57e38f6f, type: 3}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[1].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: AmbientSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 29c7f26f42c7d433eaa4a772e3bd97b3, type: 3}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[2].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: BossMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165743886328877495, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823029928320440310, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209393551947501505, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209393551947501505, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209393551947501505, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209393551947501505, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209393551947501505, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209393551947501505, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209393551947501505, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209393551947501505, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209393551947501505, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209393551947501505, guid: 0115962dacf584376a982032263e2c64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0115962dacf584376a982032263e2c64, type: 3}
 --- !u!1 &254405138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,8 +1116,8 @@ Camera:
   m_GameObject: {fileID: 890378578}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.2627451, g: 0.03529412, b: 0.07450981, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1057,6 +1166,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1677265072451427674, guid: 5aa6bcda0a1f385449e49e6b65a4b93e, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2085561184773944447, guid: 5aa6bcda0a1f385449e49e6b65a4b93e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2809,6 +2922,8 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 252181629}
+  - {fileID: 1858363200}
   - {fileID: 890378580}
   - {fileID: 1613465798}
   - {fileID: 1389790366}
@@ -2818,4 +2933,3 @@ SceneRoots:
   - {fileID: 1669222546}
   - {fileID: 1939893982}
   - {fileID: 1104257881}
-  - {fileID: 1858363200}

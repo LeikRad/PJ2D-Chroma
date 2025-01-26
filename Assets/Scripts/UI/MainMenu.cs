@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void GoToScene(string sceneName)
     {
-        SceneChanger.Instance.ChangeScene(sceneName, new Vector3(-69.7f, 0f, 0f));
+        SceneChanger.Instance.ChangeScene(sceneName, new Vector3(0f, 0f, 0f));
         // SceneManager.LoadScene(sceneName);
     }
 

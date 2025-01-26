@@ -50,7 +50,7 @@ public class Narrative : MonoBehaviour
         {
             //mainmenu.GoToScene("Room_1.1");
 
-            SceneChanger.Instance.ChangeScene("Room_1.1", new Vector3(-69.7f, 0f, 0f));
+            SceneChanger.Instance.ChangeScene("StartingRoom", new Vector3(0f, 0f, 0f));
 
         }
     }
