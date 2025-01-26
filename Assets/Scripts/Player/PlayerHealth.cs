@@ -38,14 +38,6 @@ public class PlayerHealth : Health
                 }
             }
         }
-
-        if (currentHealth <= 0)
-        {
-            Player.Instance.GetComponent<Animator>().SetBool("Died", true);
-        } else
-        {
-            Player.Instance.GetComponent<Animator>().SetBool("Died", false);
-        }
     }
 
     public override void TakeDamage(float amount, Transform attacker)
@@ -84,6 +76,7 @@ public class PlayerHealth : Health
     
     public void Death()
     {
+        Player.Instance.GetComponent<Animator>().SetBool("Died", true);
         RespawnManager.Instance.RespawnPlayer();
     }
 }

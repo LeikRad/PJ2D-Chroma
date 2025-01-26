@@ -17,6 +17,8 @@ public class SaveSystem
         public bool BossDefeated;
         public bool PlatformsActivated;
         public bool LavaDestroyed;
+        public string BenchSceneName;  
+        public Vector3 BenchRespawnPosition; 
     }
     
     public static string SaveFilename()
@@ -37,6 +39,8 @@ public class SaveSystem
         _saveData.PlayerHealth = player.GetComponent<PlayerHealth>().currentHealth;
         _saveData.HasWeapon = player.GetComponent<PlayerWeapon>().equippedWeapon != null;
         _saveData.CurrentScene = SceneManager.GetSceneAt(1).name;
+        _saveData.BenchSceneName = RespawnManager.Instance.benchSceneName;
+        _saveData.BenchRespawnPosition = RespawnManager.Instance.GetBenchRespawnPosition();
     }
     
     public static void Load()
@@ -92,6 +96,10 @@ public class SaveSystem
         if (_saveData.BossDefeated)
         {
             GameManager.Instance.DestroyBossAndLava();
+        }
+        if (!string.IsNullOrEmpty(_saveData.BenchSceneName))
+        {
+            RespawnManager.Instance.SetBenchRespawnPoint(_saveData.BenchSceneName, _saveData.BenchRespawnPosition);
         }
     }
 
