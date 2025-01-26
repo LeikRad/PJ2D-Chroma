@@ -42,11 +42,26 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: background
-    uniqueID: 1242586809
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: CameraSortingLayer
+    uniqueID: 2616616539
+    locked: 0
+  - name: Background Close
+    uniqueID: 1141395889
+    locked: 0
+  - name: Midground
+    uniqueID: 2343420855
+    locked: 0
+  - name: Midground Close
+    uniqueID: 3208369655
+    locked: 0
+  - name: Ground
+    uniqueID: 2201301857
+    locked: 0
+  - name: Foreground
+    uniqueID: 951792095
     locked: 0
   m_RenderingLayers:
   - Default
