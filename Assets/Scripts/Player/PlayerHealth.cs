@@ -99,7 +99,7 @@ public class PlayerHealth : Health
         isInvulnerable = true;
         invulnerabilityTimer = invulnerabilityTime; 
 
-        if (attacker != null)
+        if (attacker != null && currentHealth > 0)
         {
             player.Knockback(attacker);
         }

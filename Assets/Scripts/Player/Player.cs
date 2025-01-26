@@ -36,18 +36,18 @@ public class Player : MonoBehaviour
     private bool isWallSliding;
     
     
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField]  Rigidbody2D rb;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform wallCheck;
 
-    private bool canMove = true;
+    public bool canMove = true;
     private Vector3 velocity;
     private bool isGrounded;
     public Animator animator;
 
     private Health health;
-
+    private PlayerWeapon playerWeapon;
     public static Player Instance { get; private set; }
 
     void Awake() {
@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         health = GetComponent<Health>();
+        playerWeapon = GetComponent<PlayerWeapon>();
     }
 
     // Update is called once per frame
@@ -238,7 +239,7 @@ public class Player : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1;
             transform.localScale = localScale;
-            // rotate weaponholder
+            playerWeapon.weaponHolder.localScale = new Vector3(isFacingRight ? 1 : -1,1,1);
         }
     }   
 

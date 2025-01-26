@@ -30,6 +30,7 @@ public class RespawnManager : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(benchSceneName))
         {
+            Player.Instance.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             StartCoroutine(WaitAndRespawn());
         }
         else
@@ -51,5 +52,7 @@ public class RespawnManager : MonoBehaviour
         playerHealth.RestoreHealth();
         SceneChanger.Instance.SetCurrentScene(SceneManager.GetSceneByName(benchSceneName));
         Player.Instance.GetComponent<Animator>().SetBool("Died", false);
+        Player.Instance.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        Player.Instance.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }

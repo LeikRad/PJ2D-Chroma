@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Narrative : MonoBehaviour
 {
@@ -49,8 +48,10 @@ public class Narrative : MonoBehaviour
         }
         if (third_current_count == thirdCutscene.Count)
         {
-            mainmenu.GoToScene("Room_1.1");
-            //SceneManager.LoadScene("Room_1.1");
+            //mainmenu.GoToScene("Room_1.1");
+
+            SceneChanger.Instance.ChangeScene("Room_1.1", new Vector3(-69.7f, 0f, 0f));
+
         }
     }
 }
