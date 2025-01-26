@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UIElements;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -23,8 +22,8 @@ public class Player : MonoBehaviour
     public float dashingForce = 10f;
     public float dashingTime = 0.2f;
     public float dashingCooldown = 1f;
-    private bool canDash = true;
-    private bool isDashing;
+    public bool canDash = true;
+    public bool isDashing;
     
     // Wall Sliding and Jumping
     public float wallSlideSpeed = 1f;
@@ -37,17 +36,18 @@ public class Player : MonoBehaviour
     private bool isWallSliding;
     
     
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField]  Rigidbody2D rb;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform wallCheck;
 
     public bool canMove = true;
+    private Vector3 velocity;
     private bool isGrounded;
     public Animator animator;
-    private PlayerWeapon playerWeapon;
-    public PlatformerActivator platformActivator;
 
+    private Health health;
+    private PlayerWeapon playerWeapon;
     public static Player Instance { get; private set; }
 
     void Awake() {
@@ -62,63 +62,71 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
+        health = GetComponent<Health>();
         playerWeapon = GetComponent<PlayerWeapon>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDashing || !canMove)
+        if (health.currentHealth > 0)
         {
-            return;
-        }
-        IsGroundedCheck();
 
-        // limit player falling speed
-        if (rb.linearVelocityY < terminalVelocity)
-        {
-            rb.linearVelocityY = terminalVelocity;
-        }
-        
-        if (isGrounded)
-        {
-            // TODO: fix bug here of animation
-            jumpCount = 0;
-            animator.SetBool("IsJumping", false);
-        }
-        
-        horizontal = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
-        
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-        }
-        
-        if (Input.GetButtonDown("Jump") && rb.linearVelocityY > 0){
-            rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY * 0.5f);
-        }
-        
-        // TODO: Input map this 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            StartCoroutine(Dash());
-        }
-        
-        WallSlide();
-        WallJump();
-        if (!isWallJumping)
-        {
-            Flip();
-        }
+            if (isDashing || !canMove)
+            {
+                return;
+            }
+            IsGroundedCheck();
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            GameManager.Instance.SaveGame();
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            GameManager.Instance.LoadGame();
+            // limit player falling speed
+            if (rb.linearVelocityY < terminalVelocity)
+            {
+                rb.linearVelocityY = terminalVelocity;
+            }
+
+            if (isGrounded)
+            {
+                jumpCount = 0;
+            }
+
+            horizontal = Input.GetAxisRaw("Horizontal");
+            animator.SetFloat("Speed", Mathf.Abs(horizontal));
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                Jump();
+                animator.SetBool("IsJumping", true);
+
+            }
+
+            if (Input.GetButtonDown("Jump") && rb.linearVelocityY > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY * 0.5f);
+            }
+
+            // TODO: Input map this 
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            {
+                StartCoroutine(Dash());
+                animator.SetBool("isDash", true);
+            }
+            else
+            {
+                animator.SetBool("isDash", false);
+            }
+
+            WallSlide();
+            WallJump();
+            if (!isWallJumping)
+            {
+                Flip();
+            }
+
+            //jumping bug
+            if (rb.linearVelocityY <= 0)
+            {
+                animator.SetBool("IsJumping", false);
+            }
         }
     }
 
@@ -130,7 +138,7 @@ public class Player : MonoBehaviour
         }
         jumpCount++;
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
-        animator.SetBool("IsJumping", true);
+        //animator.SetBool("IsJumping", true);
         return;
     }
 
@@ -200,10 +208,12 @@ public class Player : MonoBehaviour
             isWallSliding = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x,
                 Mathf.Clamp(rb.linearVelocity.y, -wallSlideSpeed, float.MaxValue));
+            animator.SetBool("IsWallSlide", true);
         }
         else
         {
             isWallSliding = false;
+            animator.SetBool("IsWallSlide", false);
         }
     }
 
@@ -229,7 +239,7 @@ public class Player : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1;
             transform.localScale = localScale;
-            playerWeapon.weaponHolder.localScale = new Vector3(isFacingRight ? 1 : -1, 1, 1);
+            playerWeapon.weaponHolder.localScale = new Vector3(isFacingRight ? 1 : -1,1,1);
         }
     }   
 
@@ -275,9 +285,11 @@ public class Player : MonoBehaviour
         // TODO: Fix this bug fast
         canMove = false;
         Vector2 difference = (transform.position - attacker.transform.position).normalized;
+        Debug.Log("Diff: " + difference);
         Vector2 force = difference * 10;
-        rb.linearVelocity = Vector2.zero; 
-        rb.linearVelocity = force;
+        Debug.Log("Force: " + force);
+        rb.linearVelocity = Vector2.zero; // Reset current velocity
+        rb.AddForce(force, ForceMode2D.Impulse);
         StartCoroutine(KnockbackTimer());
         animator.SetBool("IsHurt", true);
     }
@@ -285,36 +297,8 @@ public class Player : MonoBehaviour
     private IEnumerator KnockbackTimer()
     {
         yield return new WaitForSeconds(0.4f);
-        Debug.Log("Knockback Timer");
         canMove = true;
         animator.SetBool("IsHurt", false);
     }
     
-    public void Save(ref SaveSystem.SaveData data)
-    {
-        data.PlayerPosition = transform.position;
-        data.PlayerHealth = GetComponent<PlayerHealth>().currentHealth;
-        data.HasWeapon = GetComponent<PlayerWeapon>().equippedWeapon != null;
-    }
-
-    public void Load(SaveSystem.SaveData data)
-    {
-        transform.position = data.PlayerPosition;
-        GetComponent<PlayerHealth>().currentHealth = data.PlayerHealth;
-
-        if (data.HasWeapon)
-        {
-            GetComponent<PlayerWeapon>().EquipDefaultWeapon();
-        }
-    }
 }
-
-[System.Serializable]
-public struct PlayerSaveData
-{
-    public Vector3 Position;
-    public float Health;
-    public bool HasWeapon;
-    
-}
-    

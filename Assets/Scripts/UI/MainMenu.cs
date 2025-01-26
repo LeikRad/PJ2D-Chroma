@@ -5,8 +5,14 @@ public class MainMenu : MonoBehaviour
 {
     public void GoToScene(string sceneName)
     {
-        SceneChanger.Instance.ChangeScene(sceneName, new Vector3(36f, 4f, 0f));
+        SceneChanger.Instance.ChangeScene(sceneName, new Vector3(-69.7f, 0f, 0f));
         // SceneManager.LoadScene(sceneName);
+    }
+
+    public void GoToOptions()
+    {
+        SceneManager.LoadScene("OptionsMenu");
+        //SceneManager.UnloadScene("MasterScene");
     }
 
     public void QuitGame()

@@ -20,6 +20,7 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0 && CompareTag("Enemy"))
         {
             Die();
+
         }
     }
 
@@ -30,7 +31,11 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        Debug.Log("Player is Dead!");
+
+        Animator play_animator = Player.Instance.GetComponent<Animator>();
+        play_animator.SetBool("Died", true);
     }
 
     public float GetHealth()

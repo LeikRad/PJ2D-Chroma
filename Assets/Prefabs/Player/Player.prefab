@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 883855774883574949}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.18, z: 0}
+  m_LocalPosition: {x: 0, y: 0.18, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -283,6 +283,8 @@ MonoBehaviour:
   dashingForce: 24
   dashingTime: 0.2
   dashingCooldown: 1
+  canDash: 1
+  isDashing: 0
   wallSlideSpeed: 1
   wallJumpingTime: 0.2
   wallJumpingDuration: 0.1
@@ -295,7 +297,6 @@ MonoBehaviour:
   wallCheck: {fileID: 4126129468561719546}
   canMove: 1
   animator: {fileID: 2301948987361897729}
-  platformActivator: {fileID: 0}
 --- !u!114 &1677265072451427674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,17 +310,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
-  invulnerabilityDuration: 5
+  currentHealth: 0
   health: 0
   numOfHearts: 0
   hearts: []
   fullHeart: {fileID: 0}
   emptyHeart: {fileID: 0}
   animator: {fileID: 2301948987361897729}
-  playerGameObject: {fileID: 0}
-  currentHealth: 0
-  animator: {fileID: 2301948987361897729}
   invulnerabilityTime: 1.5
+  playerGameObject: {fileID: 0}
 --- !u!114 &7003637994777776472
 MonoBehaviour:
   m_ObjectHideFlags: 0
