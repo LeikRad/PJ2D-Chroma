@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MasterScene.unity
     guid: 5fc33b905a64cd24b8f143d310264260
   - enabled: 1
+    path: Assets/Scenes/DoubleJump_Room.unity
+    guid: 3576ffd6d3175429daa68f3307ae2f78
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: f4c01d697ceae4015a32518cf70f8d59
+  - enabled: 1
+    path: Assets/Scenes/Narrative.unity
+    guid: 0923c8dcaa099aa43992344d71a120b5
+  - enabled: 1
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: 65b2c444a33734844aeb40d5f0dbb75e
   - enabled: 1
     path: Assets/Scenes/Room_1.1.unity
     guid: 9bce8704ef0b14d2eaf18ed534e48239
@@ -21,10 +30,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Room_1.3.unity
     guid: 6fcd79db134ed344d9a16b47359c9807
   - enabled: 1
-    path: Assets/Scenes/EndScene.unity
-    guid: ff0cc8f47898f43bea1645a640349ef8
+    path: Assets/Scenes/Room_1.4.unity
+    guid: bcb7c13120c704fa38d624fb97338b7a
   - enabled: 1
-    path: Assets/Scenes/Narrative.unity
-    guid: 0923c8dcaa099aa43992344d71a120b5
+    path: Assets/Scenes/StartingRoom.unity
+    guid: dcb238fbf9a4343f599c165d37148ed0
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
