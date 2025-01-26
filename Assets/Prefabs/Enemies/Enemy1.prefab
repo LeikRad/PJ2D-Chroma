@@ -113,7 +113,7 @@ MonoBehaviour:
   speed: 2
   player: {fileID: 0}
   detectionRange: 3
-  attackDamage: 10
+  attackDamage: 1
 --- !u!95 &2405785996604967122
 Animator:
   serializedVersion: 7

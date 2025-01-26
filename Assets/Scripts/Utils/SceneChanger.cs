@@ -7,7 +7,7 @@ public class SceneChanger : MonoBehaviour
 {
     public static SceneChanger Instance { get; private set; }
     
-    private Scene currentScene;
+    public Scene currentScene;
     private FadeInOut fade;
     private void Awake()
     {
@@ -24,6 +24,11 @@ public class SceneChanger : MonoBehaviour
         Debug.Log("Current Scene: " + currentScene.name);
     }
     
+    public void SetCurrentScene(Scene scene)
+    {
+        currentScene = scene;
+    }
+    
     public void ChangeScene(string sceneName, Vector3 position)
     {
         StartCoroutine(LoadScene(sceneName, position));
@@ -31,28 +36,34 @@ public class SceneChanger : MonoBehaviour
     
     private IEnumerator LoadScene(string sceneName, Vector3 position)
     {
-        // FdaeIn
         fade.fadeIn();
-        // disable player movement
+
         GameObject player = GameObject.FindWithTag("Player");
         yield return new WaitForSeconds(fade.timeToFade);
-        // unload current scene
-        yield return SceneManager.UnloadSceneAsync(currentScene);
-        
-        // load next scene
-        yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-        // get player object and move it
+        if (SceneManager.sceneCount > 1)
+        {
+            Scene oldScene = SceneManager.GetSceneAt(1);
+            if (oldScene.IsValid() && oldScene.isLoaded)
+            {
+                Debug.Log("Descarregando cena: " + oldScene.name);
+                yield return SceneManager.UnloadSceneAsync(oldScene);
+            }
+        }
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
         if (player != null && position != Vector3.zero)
         {
             player.transform.position = position;
         }
-        // FadeOut
+
         fade.fadeOut();
         yield return new WaitForSeconds(fade.timeToFade);
-        
-        //enable player movement
-        
-        // update current scene
-        currentScene = SceneManager.GetSceneByName(sceneName);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
+
+        Debug.Log("Cena carregada: " + sceneName);
     }
 }

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Unity.VisualScripting;
+using UnityEngine;
 
 public class EnemyAiNoPointPatrol : MonoBehaviour
 {
@@ -6,7 +8,6 @@ public class EnemyAiNoPointPatrol : MonoBehaviour
     public float speed = 2f;         
     public Transform player;        
     public float detectionRange = 10f; 
-    public float attackDamage = 10f;
     private Vector3 spawnPosition;  
     private bool movingRight = true; 
     private bool isChasingPlayer = false; 
@@ -69,19 +70,19 @@ public class EnemyAiNoPointPatrol : MonoBehaviour
         bool inRange = distanceToPlayer <= detectionRange;
         return inRange;
     }
+
     private void OnCollisionEnter2D(Collision2D other)
-    { 
-       
+    {
         if (other.gameObject.CompareTag("Player"))
         {
-            Health playerHealth = other.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
+            if (player != null)
             {
-                playerHealth.TakeDamage(attackDamage, this.transform);
-
-                if (playerHealth.GetHealth() <= 0)
+                player.TakeDamage(10, transform);
+                if (player.GetHealth() <= 0)
                 {
                     isPlayerAlive = false;
+                    player.Death();
                 }
             }
         }

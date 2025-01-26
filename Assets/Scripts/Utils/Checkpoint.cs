@@ -8,9 +8,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // get gameobject with tag respawn
             GameObject respawn = GameObject.FindGameObjectWithTag("Respawn");
-            // for each child in respawn update the position to the current checkpoint
             foreach (Transform child in respawn.transform)
             {
                 RespawnController respawnController = child.GetComponent<RespawnController>();
