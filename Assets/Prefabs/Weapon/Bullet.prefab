@@ -105,6 +105,8 @@ MonoBehaviour:
   speed: 10
   damage: 25
   maxDistance: 10
+  _splatParent: {fileID: 0}
+  _splatPrefab: {fileID: 887728461143799696, guid: 888ea7a92cb6bd0459cfb23655de7870, type: 3}
 --- !u!50 &253898701047297828
 Rigidbody2D:
   serializedVersion: 5
