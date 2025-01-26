@@ -2,26 +2,42 @@
 
 public class RespawnController : MonoBehaviour
 {
-    public float attackDamage = 10f;
-    private bool isPlayerAlive = true;
+    public float attackDamage = 10f; 
     public Transform respawnPoint;
+    private BossStateMachine boss;
+
+    private void Awake()
+    {
+        boss = FindObjectOfType<BossStateMachine>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player")) 
         {
-            Health playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(attackDamage, null);
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            
+            playerHealth.TakeDamage(attackDamage, transform);
+            Debug.Log("Player hit by lava!");
 
-                if (playerHealth.GetHealth() <= 0)
+            if (gameObject.CompareTag("BossLava")) 
+            {
+                if (boss != null)
                 {
-                    isPlayerAlive = false;
+                    boss.ResetPhaseFour();
                 }
             }
-            Debug.Log(respawnPoint.position);
-            collision.transform.position = respawnPoint.position;
+            if (playerHealth.GetHealth() > 0)
+            {
+                if (respawnPoint != null)
+                {
+                    collision.transform.position = respawnPoint.position; 
+                }
+            }
+            else
+            {
+                playerHealth.Death();
+            }
         }
     }
 }

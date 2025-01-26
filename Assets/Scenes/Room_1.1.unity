@@ -10957,18 +10957,18 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 394185619}
-  - component: {fileID: 394185624}
+  - component: {fileID: 394185621}
   - component: {fileID: 394185623}
   - component: {fileID: 394185622}
-  - component: {fileID: 394185621}
+  - component: {fileID: 394185624}
   - component: {fileID: 394185620}
   m_Layer: 0
-  m_Name: Lava (5)
+  m_Name: 
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &394185619
 Transform:
   m_ObjectHideFlags: 0
@@ -23023,12 +23023,12 @@ GameObject:
   - component: {fileID: 1059412914}
   - component: {fileID: 1059412913}
   m_Layer: 0
-  m_Name: Lava Particles (6)
+  m_Name: 
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1059412912
 Transform:
   m_ObjectHideFlags: 0

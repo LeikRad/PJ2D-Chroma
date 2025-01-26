@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,11 @@ public class PlayerHealth : Health
     public Animator animator;
     private DamageFlash damageFlash;
 
+    public float invulnerabilityTime = 0.4f; 
+    private float invulnerabilityTimer = 0f; 
+    private bool isInvulnerable = false;
+    private GameObject[] enemies;
+
     public GameObject playerGameObject; // Reference to the player's GameObject
 
     public new void Start()
@@ -23,26 +29,8 @@ public class PlayerHealth : Health
         damageFlash = GetComponent<DamageFlash>();
     }
 
-    public override void TakeDamage(float amount, Transform attacker)
+    private void Update()
     {
-        base.TakeDamage(amount);
-
-        // Decrease health based on damage amount
-        health -= Mathf.CeilToInt(amount);
-
-        // Clamp health to ensure it stays within valid range
-        health = Mathf.Clamp(health, 0, numOfHearts);
-
-        if (attacker != null)
-        {
-            player.Knockback(attacker);
-        }
-        animator.SetBool("IsHurt", true);
-        damageFlash.CallDamageFlash();
-        animator.SetBool("IsHurt", false);
-    }
-
-    void Update(){
         if (health > numOfHearts)
         {
             health = numOfHearts;
@@ -68,10 +56,69 @@ public class PlayerHealth : Health
                 hearts[i].enabled = false;
             }
         }
-
-        if (health <= 0)
+        if (isInvulnerable)
         {
-            playerGameObject.SetActive(false);
+            invulnerabilityTimer -= Time.deltaTime;
+            if (invulnerabilityTimer <= 0)
+            {
+                isInvulnerable = false;
+                if (enemies.Length > 0)
+                {
+                    //get all objects with tag enemy
+                    foreach (GameObject enemy in enemies)
+                    {
+                        Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>(),
+                            false);
+                    }
+                }
+            }
         }
+    }
+
+    public override void TakeDamage(float amount, Transform attacker)
+    {
+        if (isInvulnerable)
+        {
+            return;
+        }
+        base.TakeDamage(amount);
+
+        // Decrease health based on damage amount
+        health -= Mathf.CeilToInt(amount);
+
+        // Clamp health to ensure it stays within valid range
+        health = Mathf.Clamp(health, 0, numOfHearts);
+
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>(),
+                true);
+        }
+        Debug.Log($"Player took {amount} damage! Current health: {currentHealth}");
+        isInvulnerable = true;
+        invulnerabilityTimer = invulnerabilityTime; 
+
+        if (attacker != null)
+        {
+            player.Knockback(attacker);
+        }
+
+        animator.SetBool("IsHurt", true);
+        damageFlash.CallDamageFlash();
+        animator.SetBool("IsHurt", false);
+
+
+    }
+
+    public void RestoreHealth()
+    {
+        currentHealth = maxHealth;
+    }
+    
+    public void Death()
+    {
+        Player.Instance.GetComponent<Animator>().SetBool("Died", true);
+        RespawnManager.Instance.RespawnPlayer();
     }
 }

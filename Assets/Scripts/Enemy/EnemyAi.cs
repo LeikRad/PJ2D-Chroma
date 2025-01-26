@@ -109,12 +109,7 @@ public class EnemyAI : MonoBehaviour {
                 Health playerHealth = other.gameObject.GetComponent<PlayerHealth>();
                 if (playerHealth != null)
                 {
-                    playerHealth.TakeDamage(attackDamage, this.transform);
-
-                    if (playerHealth.GetHealth() <= 0)
-                    {
-                        isPlayerAlive = false;
-                    }
+                    playerHealth.TakeDamage(attackDamage);
                 }
             }
         }

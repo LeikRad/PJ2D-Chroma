@@ -293,7 +293,9 @@ MonoBehaviour:
     m_Bits: 256
   groundCheck: {fileID: 8314275568169796139}
   wallCheck: {fileID: 4126129468561719546}
+  canMove: 1
   animator: {fileID: 2301948987361897729}
+  platformActivator: {fileID: 0}
 --- !u!114 &1677265072451427674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +317,9 @@ MonoBehaviour:
   emptyHeart: {fileID: 0}
   animator: {fileID: 2301948987361897729}
   playerGameObject: {fileID: 0}
+  currentHealth: 0
+  animator: {fileID: 2301948987361897729}
+  invulnerabilityTime: 1.5
 --- !u!114 &7003637994777776472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +335,7 @@ MonoBehaviour:
   weaponHolder: {fileID: 8697332088275871174}
   equippedWeapon: {fileID: 0}
   firePoint: {fileID: 0}
+  rotationPoint: {fileID: 0}
   bulletPrefab: {fileID: 8579842486537473455, guid: 06be65270deabf2449f251dd2de829b5, type: 3}
   bulletSpeed: 10
   inkMeter: {fileID: 0}
