@@ -31,14 +31,14 @@ public class PlayerHealth : Health
 
     private void Update()
     {
-        if (health > numOfHearts)
+        if (currentHealth > numOfHearts)
         {
-            health = numOfHearts;
+            currentHealth = numOfHearts;
         }
 
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < health)
+            if (i < currentHealth)
             {
                 hearts[i].sprite = fullHeart;
             }
