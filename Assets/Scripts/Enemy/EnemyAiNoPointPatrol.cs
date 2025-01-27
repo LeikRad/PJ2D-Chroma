@@ -78,7 +78,7 @@ public class EnemyAiNoPointPatrol : MonoBehaviour
             PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
             if (player != null)
             {
-                player.TakeDamage(10, transform);
+                player.TakeDamage(1, transform);
                 if (player.GetHealth() <= 0)
                 {
                     isPlayerAlive = false;

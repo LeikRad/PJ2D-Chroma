@@ -2,7 +2,7 @@
 
 public class RespawnController : MonoBehaviour
 {
-    public float attackDamage = 10f; 
+    public float attackDamage = 1f; 
     public Transform respawnPoint;
     private BossStateMachine boss;
 
