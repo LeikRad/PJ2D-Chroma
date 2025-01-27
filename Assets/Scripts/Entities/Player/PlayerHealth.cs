@@ -20,7 +20,7 @@ public class PlayerHealth : Health
     private bool isInvulnerable = false;
     private GameObject[] enemies;
 
-    public GameObject playerGameObject; // Reference to the player's GameObject
+    public GameObject playerGameObject; 
 
     public new void Start()
     {

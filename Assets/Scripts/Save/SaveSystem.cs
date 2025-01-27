@@ -18,7 +18,9 @@ public class SaveSystem
         public bool PlatformsActivated;
         public bool LavaDestroyed;
         public string BenchSceneName;  
-        public Vector3 BenchRespawnPosition; 
+        public Vector3 BenchRespawnPosition;
+        public int MaxJumps;
+        public bool DashEnabled;
     }
     
     public static string SaveFilename()
@@ -34,10 +36,28 @@ public class SaveSystem
     
     private static void HandleSaveData()
     {
-        Player player = Player.Instance;
+        PlayerStateMachine player = GameObject.FindObjectOfType<PlayerStateMachine>();
+        if (player == null)
+        {
+            Debug.LogError("PlayerStateMachine não encontrado!");
+            return;
+        }
         _saveData.PlayerPosition = player.transform.position;
-        _saveData.PlayerHealth = player.GetComponent<PlayerHealth>().currentHealth;
-        _saveData.HasWeapon = player.GetComponent<PlayerWeapon>().equippedWeapon != null;
+        _saveData.MaxJumps = player.maxJumps;
+        _saveData.DashEnabled = player.dashEnabled;
+        
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            _saveData.PlayerHealth = playerHealth.currentHealth;
+        }
+        
+        PlayerWeapon playerWeapon = player.GetComponent<PlayerWeapon>();
+        if (playerWeapon != null)
+        {
+            _saveData.HasWeapon = playerWeapon.equippedWeapon != null;
+        }
+        
         _saveData.CurrentScene = SceneManager.GetSceneAt(1).name;
         _saveData.BenchSceneName = RespawnManager.Instance.benchSceneName;
         _saveData.BenchRespawnPosition = RespawnManager.Instance.GetBenchRespawnPosition();
@@ -45,6 +65,12 @@ public class SaveSystem
     
     public static void Load()
     {
+        if (!File.Exists(SaveFilename()))
+        {
+            Debug.LogError("Nenhum arquivo de save encontrado!");
+            return;
+        }
+
         string saveContent = File.ReadAllText(SaveFilename());
         _saveData = JsonUtility.FromJson<SaveData>(saveContent);
         GameManager.Instance.StartCoroutine(LoadSavedScene());
@@ -80,19 +106,29 @@ public class SaveSystem
     
     private static void HandleLoadData()
     {
-        Player player = Player.Instance;
-        PlayerWeapon playerWeapon = player.GetComponent<PlayerWeapon>();
-        if (playerWeapon == null)
+        PlayerStateMachine player = GameObject.FindObjectOfType<PlayerStateMachine>();
+        if (player == null)
         {
+            Debug.LogError("PlayerStateMachine não encontrado!");
             return;
         }
+        
         player.transform.position = _saveData.PlayerPosition;
-        player.GetComponent<PlayerHealth>().currentHealth = _saveData.PlayerHealth;
-
-        if (_saveData.HasWeapon)
+        player.maxJumps = _saveData.MaxJumps;
+        player.dashEnabled = _saveData.DashEnabled;
+        
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
         {
-            player.GetComponent<PlayerWeapon>().EquipDefaultWeapon();
+            playerHealth.currentHealth = _saveData.PlayerHealth;
         }
+        
+        PlayerWeapon playerWeapon = player.GetComponent<PlayerWeapon>();
+        if (playerWeapon != null && _saveData.HasWeapon)
+        {
+            playerWeapon.EquipDefaultWeapon();
+        }
+        
         if (_saveData.BossDefeated)
         {
             GameManager.Instance.DestroyBossAndLava();

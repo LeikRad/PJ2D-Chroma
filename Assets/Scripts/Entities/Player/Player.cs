@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (health.currentHealth > 0)
         {
@@ -129,6 +129,7 @@ public class Player : MonoBehaviour
             }
         }
     }
+    */
 
     private void Jump()
     {
@@ -179,7 +180,7 @@ public class Player : MonoBehaviour
     {
         isWallJumping = false;
     }
-    private void FixedUpdate()
+    /*private void FixedUpdate()
     {
         if (isDashing)
         {
@@ -189,7 +190,7 @@ public class Player : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocityY);
         }
-    }
+    }*/
 
     private void IsGroundedCheck()
     { 
@@ -300,5 +301,31 @@ public class Player : MonoBehaviour
         canMove = true;
         animator.SetBool("IsHurt", false);
     }
+    
+    public void Save(ref SaveSystem.SaveData data)
+    {
+        data.PlayerPosition = transform.position;
+        data.PlayerHealth = GetComponent<PlayerHealth>().currentHealth;
+        data.HasWeapon = GetComponent<PlayerWeapon>().equippedWeapon != null;
+    }
+
+    public void Load(SaveSystem.SaveData data)
+    {
+        transform.position = data.PlayerPosition;
+        GetComponent<PlayerHealth>().currentHealth = data.PlayerHealth;
+
+        if (data.HasWeapon)
+        {
+            GetComponent<PlayerWeapon>().EquipDefaultWeapon();
+        }
+    }
+}
+
+[System.Serializable]
+public struct PlayerSaveData
+{
+    public Vector3 Position;
+    public float Health;
+    public bool HasWeapon;
     
 }
