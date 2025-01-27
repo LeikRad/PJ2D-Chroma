@@ -55,6 +55,9 @@ public class AudioManager : MonoBehaviour
             case "StartingRoom":
                 Play("AmbientSound");
                 break;
+            case "EnemyTest 1":
+                Play("BossMusic");
+                break;
             // Add more cases for additional scenes
             default:
                 Debug.LogWarning("No music defined for this scene.");
